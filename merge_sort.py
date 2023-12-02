@@ -1,4 +1,4 @@
-from split_functionality import split
+from split_functionality import split_list
 from merge_functionality import merge
 
 
@@ -17,7 +17,7 @@ def merge_sort(list):
     if len(list) <= 1:
         return list
 
-    left_half, right_half = split(list)
+    left_half, right_half = split_list(list)
     print("left_half", left_half)
     print("right_half", right_half)
     left = merge_sort(left_half)
