@@ -1,3 +1,4 @@
+from string_to_list import string_to_list
 from test_cases import test_merge_sort
 
 
@@ -10,10 +11,7 @@ def main():
     # let user input different numbers
     numbers = input("Enter numbers separated by a comma: ")
     # convert string to list
-    numbers = numbers.split(",")
-    # convert list of strings to list of integers
-    numbers = [int(number) for number in numbers]
-    print("Unsorted list: ", numbers)
+    numbers = string_to_list(numbers)
     test_merge_sort(numbers)
 
 
