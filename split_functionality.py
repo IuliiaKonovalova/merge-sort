@@ -7,7 +7,7 @@ def split_list(initial_list):
         left_part (list): left part of the list
         right_part (list): right part of the list
     """
-    mid_point = initial_list // 2
+    mid_point = len(initial_list) // 2
     left_part = initial_list[:mid_point]
     right_part = initial_list[mid_point:]
 
