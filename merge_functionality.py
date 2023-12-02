@@ -1,9 +1,9 @@
-def merge(list_1, list_2):
+def merge(left, list_2):
     """
     Takes 2 lists and analyzes them to sort them in ascending order
     Args:
-        list_1 (list): list of numbers
-        list_2 (list): list of numbers
+        left (list): list of numbers
+        right (list): list of numbers
     Returns:
         initial_sorted_list (list): list of numbers sorted in ascending order
     """
@@ -11,19 +11,19 @@ def merge(list_1, list_2):
     i = 0
     j = 0
     # sort the list using i and j as pointers
-    while i < len(list_1) and j < len(list_2):
-        if list_1[i] < list_2[j]:
-            initial_sorted_list.append(list_1[i])
+    while i < len(left) and j < len(list_2):
+        if left[i] < list_2[j]:
+            initial_sorted_list.append(left[i])
             i += 1
         else:
             initial_sorted_list.append(list_2[j])
             j += 1
-    # append the remaining elements from list_1 that was not fully iterated
-    while i < list_1[i]:
-        initial_sorted_list.append(list_1[i])
+    # append the remaining elements from left that was not fully iterated
+    while i < len(left):
+        initial_sorted_list.append(left[i])
         i += 1
     # append the remaining elements from list_2 that was not fully iterated
-    while j < list_2[j]:
+    while j < len(list_2):
         initial_sorted_list.append(list_2[j])
         j += 1
 
