@@ -48,6 +48,7 @@ def main():
                 show_merge_sort_with_constants(constants_3)
         elif options_choice == '2. Selection Sort':
             print(f'''SELECTION SORT''')
+            show_selection_sort_with_constants(constants_1)
         elif options_choice == '3. Insertion Sort':
             print(f'''INSERTION SORT''')
         elif options_choice == '4. Bubble Sort':
