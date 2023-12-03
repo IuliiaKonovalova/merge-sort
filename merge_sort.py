@@ -1,5 +1,6 @@
 from split_functionality import split_list
 from merge_functionality import merge
+from constant_dictionary import constants
 
 
 def merge_sort(list):
@@ -16,13 +17,11 @@ def merge_sort(list):
 
     if len(list) <= 1:
         return list
-
+    input("Enter merge_sort Press Enter to continue...")
     left_half, right_half = split_list(list)
-    print("left_half", left_half)
-    print("right_half", right_half)
     left = merge_sort(left_half)
-    print("left", left)
+    print("left in merge_sort: ", left)
     right = merge_sort(right_half)
-    print("right", right)
+    print("right in merge_sort: ", right)
 
     return merge(left, right)
