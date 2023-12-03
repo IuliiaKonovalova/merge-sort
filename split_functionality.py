@@ -1,4 +1,4 @@
-# from constant_dictionary import constants
+from print_sorted_key import print_sorted_keys
 
 
 def split_list(initial_list, constants):
@@ -12,16 +12,12 @@ def split_list(initial_list, constants):
     """
     input("Enter split_list Press Enter to continue...")
     mid_point = len(initial_list) // 2
-    print("mid_point", mid_point)
+    print("\n MIDPOINT", mid_point)
     left_part = initial_list[:mid_point]
-    print("left_part: ", left_part)
-    for key in left_part:
-        print(constants[key], end="")
-    print("\n")
+    print("\n LEFT: ", left_part)
+    print_sorted_keys(left_part, constants)
     right_part = initial_list[mid_point:]
-    print("right_part: ", right_part)
-    for key in right_part:
-        print(constants[key], end="")
-    print("\n")
+    print("\n RIGHT: ", right_part)
+    print_sorted_keys(right_part, constants)
 
     return left_part, right_part
