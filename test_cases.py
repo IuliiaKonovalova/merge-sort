@@ -1,5 +1,6 @@
 import random
 from merge_sort import merge_sort
+from selection_sort import selection_sort
 # from constant_dictionary import constants
 from print_sorted_key import print_sorted_keys
 
@@ -31,3 +32,12 @@ def test_merge_sort_with_constants(constants):
     unsorted_list = generate_unsorted_list_from_constants(constants)
     print("Sorted list: ", unsorted_list)
     print("Sorted list: ", merge_sort(unsorted_list, constants))
+
+
+def test_selection_sort_with_constants(constants):
+    """
+    Tests the merge sort algorithm with the constants dictionary
+    """
+    unsorted_list = generate_unsorted_list_from_constants(constants)
+    print("Sorted list: ", unsorted_list)
+    print("Sorted list: ", selection_sort(unsorted_list, constants))
