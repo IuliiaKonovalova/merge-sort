@@ -1,7 +1,7 @@
-from constant_dictionary import constants
+# from constant_dictionary import constants
 
 
-def merge(left, right):
+def merge(left, right, constants):
     """
     Takes 2 lists and analyzes them to sort them in ascending order
     Args:
