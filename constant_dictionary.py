@@ -18,7 +18,7 @@ def coloured_square(hex_string):
     return output
 
 
-constants = {
+constants_3 = {
     0: coloured_square("#FFFFFF"),
     1: coloured_square("#ffbaba"),
     2: coloured_square("#ff7b7b"),
@@ -53,3 +53,74 @@ constants = {
     31: coloured_square("#000000"),
 }
 
+
+constants_2 = {
+    0: coloured_square("#000D33"),  # Dark Blue
+    1: coloured_square("#002555"),
+    2: coloured_square("#00477A"),
+    3: coloured_square("#00669F"),
+    4: coloured_square("#0085C4"),
+    5: coloured_square("#009BDC"),
+    6: coloured_square("#00B2F3"),
+    7: coloured_square("#00C6FF"),
+    8: coloured_square("#4DC7FF"),
+    9: coloured_square("#99DAFF"),
+    10: coloured_square("#C9EBFF"),
+    11: coloured_square("#FFFFFF"),  # White
+    12: coloured_square("#CCCCCC"),
+    13: coloured_square("#999999"),
+    14: coloured_square("#666666"),
+    15: coloured_square("#333333"),
+    16: coloured_square("#000000"),  # Black
+}
+
+constants_1 = {
+    0: coloured_square("#FFFF00"),  # Yellow
+    1: coloured_square("#FFCC00"),
+    2: coloured_square("#FF9900"),
+    3: coloured_square("#FF6600"),
+    4: coloured_square("#FF3300"),
+    5: coloured_square("#FF0000"),  # Red
+    6: coloured_square("#E60000"),
+    7: coloured_square("#CC0000"),
+    8: coloured_square("#B30000"),
+    9: coloured_square("#8B0000"),  # Dark Red
+}
+
+
+# for key, value in constants_1.items():
+#     print(f"{key}: {value}")
+
+
+# print(
+#     f"""
+#     {constants[0]}
+#     {constants[1]}
+#     {constants[2]}
+#     {constants[3]}
+#     {constants[4]}
+#     {constants[5]}
+#     {constants[6]}
+#     {constants[7]}
+#     {constants[8]}
+#     {constants[9]}
+#     {constants[10]}
+#     {constants[11]}
+#     {constants[12]}
+#     {constants[13]}
+#     {constants[14]}
+#     {constants[15]}
+#     {constants[16]}
+#     {constants[17]}
+#     {constants[18]}
+#     {constants[19]}
+#     {constants[20]}
+#     {constants[21]}
+#     {constants[22]}
+#     {constants[23]}
+#     {constants[24]}
+#     {constants[25]}
+#     {constants[26]}
+#     {constants[27]}
+#     """
+# )
