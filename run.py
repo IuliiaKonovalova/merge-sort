@@ -1,7 +1,8 @@
 from simple_term_menu import TerminalMenu
 # from string_to_list import string_to_list
-from test_cases import test_merge_sort_with_constants
 from constant_dictionary import *
+from test_cases import *
+
 
 
 def main():
@@ -33,17 +34,18 @@ def main():
             quitting = True
         elif options_choice == '1. Merge Sort':
             print(f'''MERGE SORT''')
+            # test_merge_sort()
             sub_index = sub_menu.show()
             sub_choice = sub_options[sub_index]
             if sub_choice == '1. "Yellow to red"':
                 print(f'''YELLOW TO RED''')
-                test_merge_sort_with_constants(constants_1)
+                show_merge_sort_with_constants(constants_1)
             elif sub_choice == '2. "Short version"':
                 print(f'''SHORT VERSION''')
-                test_merge_sort_with_constants(constants_2)
+                show_merge_sort_with_constants(constants_2)
             elif sub_choice == '3. "Full version"':
                 print(f'''FULL VERSION''')
-                test_merge_sort_with_constants(constants_3)
+                show_merge_sort_with_constants(constants_3)
         elif options_choice == '2. Selection Sort':
             print(f'''SELECTION SORT''')
         elif options_choice == '3. Insertion Sort':
