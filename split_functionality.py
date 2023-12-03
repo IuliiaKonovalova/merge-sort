@@ -1,7 +1,7 @@
-from constant_dictionary import constants
+# from constant_dictionary import constants
 
 
-def split_list(initial_list):
+def split_list(initial_list, constants):
     """
     Splits a list into 2 parts
     Args:
