@@ -1,4 +1,4 @@
-# from constant_dictionary import constants
+from print_items import print_items
 
 
 def merge(left, right, constants):
@@ -30,7 +30,5 @@ def merge(left, right, constants):
         sorted_list.append(right[j])
         j += 1
     print("\nSORTED LIST: ", sorted_list)
-    for key in sorted_list:
-        print(constants[key], end="")
-    print("\n")
+    print_items(sorted_list, constants)
     return sorted_list
