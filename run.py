@@ -71,6 +71,23 @@ def main():
             elif algorithm_choice == '3. Code':
                 print(f'''CODE''')
                 display_merge_sort_code()
+        elif options_choice == '2. Selection Sort':
+            print(f'''SELECTION SORT''')
+            algorithm_options_index = algorithm_options_menu.show()
+            algorithm_choice = algorithm_options[algorithm_options_index]
+            if algorithm_choice == '1. Animation':
+                list_length_options_index = list_length_options_menu.show()
+                list_length_options_choice = list_length_options[list_length_options_index]
+                print(f'''ANIMATION''')
+                if list_length_options_choice == '1. Yellow to red':
+                    print(f'''YELLOW TO RED''')
+                    show_selection_sort_with_constants(constants_1)
+                elif list_length_options_choice == '2. Short version':
+                    print(f'''SHORT VERSION''')
+                    show_selection_sort_with_constants(constants_2)
+                elif list_length_options_choice == '3. Full version':
+                    print(f'''FULL VERSION''')
+                    show_selection_sort_with_constants(constants_3)
 
 
 if __name__ == "__main__":
