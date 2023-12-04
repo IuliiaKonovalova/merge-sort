@@ -101,7 +101,12 @@ def main():
                 elif list_length_options_choice == '3. Full version':
                     print(f'''FULL VERSION''')
                     show_selection_sort_with_constants(constants_3)
-
+        elif options_choice == '3. Insertion Sort':
+            print(f'''INSERTION SORT''')
+            # show_insertion_sort_with_constants(constants_1)
+            show_insertion_sort_animation_with_constants(constants_3)
+        elif options_choice == '4. Bubble Sort':
+            print(f'''BUBBLE SORT''')
 
 if __name__ == "__main__":
     main()
