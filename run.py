@@ -1,7 +1,7 @@
 from simple_term_menu import TerminalMenu
-# from string_to_list import string_to_list
 from constant_dictionary import *
 from test_cases import *
+from display_code.merge_sort_code.merge_sort import *
 
 
 
@@ -19,12 +19,18 @@ def main():
 
     options = ['1. Merge Sort', '2. Selection Sort', '3. Insertion Sort', '4. Bubble Sort', '5. Quit']
     main_menu = TerminalMenu(options)
-    sub_options = [
-        '1. "Yellow to red"',
-        '2. "Short version"',
-        '3. "Full version"',
+    algorithm_options = [
+        '1. Animation',
+        '2. Step by step',
+        '3. Code',
     ]
-    sub_menu = TerminalMenu(sub_options)
+    list_length_options = [
+        '1. Yellow to red',
+        '2. Short version',
+        '3. Full version',
+    ]
+    algorithm_options_menu = TerminalMenu(algorithm_options)
+    list_length_options_menu = TerminalMenu(list_length_options)
     quitting = False
     while quitting is not True:
         options_index = main_menu.show()
@@ -34,25 +40,22 @@ def main():
             quitting = True
         elif options_choice == '1. Merge Sort':
             print(f'''MERGE SORT''')
-            # test_merge_sort()
-            sub_index = sub_menu.show()
-            sub_choice = sub_options[sub_index]
-            if sub_choice == '1. "Yellow to red"':
-                print(f'''YELLOW TO RED''')
-                show_merge_sort_with_constants(constants_1)
-            elif sub_choice == '2. "Short version"':
-                print(f'''SHORT VERSION''')
-                show_merge_sort_with_constants(constants_2)
-            elif sub_choice == '3. "Full version"':
-                print(f'''FULL VERSION''')
-                show_merge_sort_with_constants(constants_3)
-        elif options_choice == '2. Selection Sort':
-            print(f'''SELECTION SORT''')
-            show_selection_sort_with_constants(constants_1)
-        elif options_choice == '3. Insertion Sort':
-            print(f'''INSERTION SORT''')
-        elif options_choice == '4. Bubble Sort':
-            print(f'''BUBBLE SORT''')
+            algorithm_options_index = algorithm_options_menu.show()
+            algorithm_choice = algorithm_options[algorithm_options_index]
+            if algorithm_choice == '1. Animation':
+                list_length_options_index = list_length_options_menu.show()
+                list_length_options_choice = list_length_options[list_length_options_index]
+                print(f'''ANIMATION''')
+                if list_length_options_choice == '1. Yellow to red':
+                    print(f'''YELLOW TO RED''')
+                    show_merge_sort_animation_with_constants(constants_1)
+                elif list_length_options_choice == '2. Short version':
+                    print(f'''SHORT VERSION''')
+                    show_merge_sort_animation_with_constants(constants_2)
+                elif list_length_options_choice == '3. Full version':
+                    print(f'''FULL VERSION''')
+                    show_merge_sort_animation_with_constants(constants_3)
+            
 
 if __name__ == "__main__":
     main()
