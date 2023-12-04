@@ -4,6 +4,7 @@ def string_to_list(string):
     :param string: a string of comma separated numbers
     :return: a list of integers
     """
+    input("Enter string_to_list Press Enter to continue...")
     # convert string to list
     numbers = string.split(",")
     # convert list of strings to list of integers
