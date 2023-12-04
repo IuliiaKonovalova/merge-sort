@@ -1,4 +1,4 @@
-from print_sorted_key import print_sorted_keys
+from print_items import print_items
 
 
 def split_list(initial_list, constants):
@@ -15,9 +15,9 @@ def split_list(initial_list, constants):
     print("\n MIDPOINT", mid_point)
     left_part = initial_list[:mid_point]
     print("\n LEFT: ", left_part)
-    print_sorted_keys(left_part, constants)
+    print_items(left_part, constants)
     right_part = initial_list[mid_point:]
     print("\n RIGHT: ", right_part)
-    print_sorted_keys(right_part, constants)
+    print_items(right_part, constants)
 
     return left_part, right_part
