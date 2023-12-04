@@ -8,7 +8,6 @@ from constant_dictionary import *
 
 def selection_sort(list_data, constants):
     headers = ["scan_index", "1st POINTER", "2nd POINTER"]
-    
     for scan_index in range(0, len(list_data)):
         table_data = []
         min_index = scan_index
