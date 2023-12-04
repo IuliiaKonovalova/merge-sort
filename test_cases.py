@@ -1,8 +1,10 @@
 import random
 from merge_sort import merge_sort
 from selection_sort import selection_sort
-# from constant_dictionary import constants
 from print_sorted_key import print_sorted_keys
+from animations.merge_sort_animation.merge_sort import *
+from insertion_sort import insertion_sort
+
 
 def generate_unsorted_list_from_constants(constants):
     """
@@ -10,34 +12,34 @@ def generate_unsorted_list_from_constants(constants):
     :return: an unsorted list of numbers
     """
     unsorted_list = []
-    # add the keys from constants to the list
     for key in constants:
         unsorted_list.append(key)
-    # shuffle the list
     random.shuffle(unsorted_list)
-    # show only values by the keys
-    # for key in unsorted_list:
-    #     print(constants[key], end="")
-    # print values in a line with a space
     print_sorted_keys(unsorted_list, constants)
     print("\n")
     print("!!!UNSORTED LIST: ", unsorted_list)
     return unsorted_list
 
 
-def test_merge_sort_with_constants(constants):
+def show_merge_sort_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
     """
     unsorted_list = generate_unsorted_list_from_constants(constants)
-    print("Sorted list: ", unsorted_list)
     print("Sorted list: ", merge_sort(unsorted_list, constants))
 
 
-def test_selection_sort_with_constants(constants):
+def show_merge_sort_animation_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
     """
     unsorted_list = generate_unsorted_list_from_constants(constants)
-    print("Sorted list: ", unsorted_list)
+    print("Sorted list: ", merge_sort_animation(unsorted_list, constants))
+
+
+def show_selection_sort_with_constants(constants):
+    """
+    Tests the merge sort algorithm with the constants dictionary
+    """
+    unsorted_list = generate_unsorted_list_from_constants(constants)
     print("Sorted list: ", selection_sort(unsorted_list, constants))
