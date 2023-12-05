@@ -2,7 +2,7 @@ from simple_term_menu import TerminalMenu
 from constant_dictionary import *
 from test_cases import *
 from display_code.merge_sort_code.merge_sort import *
-
+from display_code.selection_sort_code.selection_sort import *
 
 
 def main():
@@ -101,10 +101,12 @@ def main():
                 elif list_length_options_choice == '3. Full version':
                     print(f'''FULL VERSION''')
                     show_selection_sort_with_constants(constants_3)
+            elif algorithm_choice == '3. Code':
+                print(f'''CODE''')
+                display_selection_sort_code()
         elif options_choice == '3. Insertion Sort':
             print(f'''INSERTION SORT''')
-            # show_insertion_sort_with_constants(constants_1)
-            show_insertion_sort_animation_with_constants(constants_3)
+
         elif options_choice == '4. Bubble Sort':
             print(f'''BUBBLE SORT''')
 
