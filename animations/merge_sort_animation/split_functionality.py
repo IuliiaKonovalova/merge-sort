@@ -12,9 +12,8 @@ def split_list(initial_list, constants):
         left_part (list): left part of the list
         right_part (list): right part of the list
     """
-    # input("Enter split_list Press Enter to continue...")
+
     mid_point = len(initial_list) // 2
-    # print("\n MIDPOINT", mid_point)
     left_part = initial_list[:mid_point]
     print("\n LEFT: ", left_part)
 
