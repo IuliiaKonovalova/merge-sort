@@ -2,6 +2,14 @@ import random
 
 
 def print_items(keys, constants_dict):
+    """
+    Prints the items in a list
+    Args:
+        keys (list): list of numbers
+        constants_dict (dict): dictionary of constants
+    Returns:
+        None
+    """
     max_key = max(keys)
     if max_key == 0:
         max_key = 1
@@ -15,6 +23,15 @@ def print_items(keys, constants_dict):
 
 
 def print_temp_item(key, list_data, constants_dict):
+    """
+    Prints one item in a list
+    Args:
+        key (int): number
+        list_data (list): list of numbers
+        constants_dict (dict): dictionary of constants
+    Returns:
+        None
+    """
     max_key = max(list_data)
     if key == 0:
         key = 1
