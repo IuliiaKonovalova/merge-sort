@@ -21,3 +21,12 @@ def generate_unsorted_list_from_constants(constants):
     print("\n")
     print("!!!UNSORTED LIST: ", unsorted_list)
     return unsorted_list
+
+
+def show_merge_sort_with_constants(constants):
+    """
+    Tests the merge sort algorithm with the constants dictionary
+    """
+    unsorted_list = generate_unsorted_list_from_constants(constants)
+    print("Sorted list: ", merge_sort(unsorted_list, constants))
+
