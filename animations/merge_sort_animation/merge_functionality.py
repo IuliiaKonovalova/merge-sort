@@ -1,5 +1,3 @@
-import os
-import time
 from print_items import print_items
 
 
@@ -33,10 +31,4 @@ def merge(left, right, constants):
     print("\nSORTED and MERGED LIST: ", sorted_list)
     print_items(sorted_list, constants)
     print("\n")
-
-    # check if the sorted_list is sorted
-    if sorted(sorted_list) == sorted_list:
-        print("\n")
-        print("SORTED LIST: ", sorted_list)
-        print_items(sorted_list, constants)
     return sorted_list
