@@ -19,7 +19,7 @@ def generate_unsorted_list_from_constants(constants):
     random.shuffle(unsorted_list)
     print_items(unsorted_list, constants)
     print("\n")
-    print("!!!UNSORTED LIST: ", unsorted_list)
+    print("RANDOM LIST: ", unsorted_list)
     return unsorted_list
 
 
@@ -28,7 +28,14 @@ def show_merge_sort_with_constants(constants):
     Tests the merge sort algorithm with the constants dictionary
     """
     unsorted_list = generate_unsorted_list_from_constants(constants)
-    print("Sorted list: ", merge_sort(unsorted_list, constants))
+    temp_list = unsorted_list.copy()
+    print(
+    f"""
+    To compare: 
+    Sorted list: {merge_sort(unsorted_list, constants)}
+    Initial list: {temp_list}
+    """
+    )
 
 
 def show_merge_sort_animation_with_constants(constants):
@@ -36,6 +43,12 @@ def show_merge_sort_animation_with_constants(constants):
     Tests the merge sort algorithm with the constants dictionary
     """
     unsorted_list = generate_unsorted_list_from_constants(constants)
-    print("Sorted list: ", merge_sort_animation(unsorted_list, constants))
-
+    temp_list = unsorted_list.copy()
+    print(
+    f"""
+    To compare: 
+    Sorted list: {merge_sort_animation(unsorted_list, constants)}
+    Initial list: {temp_list}
+    """
+    )
 
