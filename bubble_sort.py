@@ -2,9 +2,9 @@ import time
 import os
 from print_items import print_items
 
-unord_list  = [3, 1 4]
+unorder_list  = [3, 1, 4]
 
-def bubble_sort(initial_list, constants):
+def bubble_sort(unord_list):
     """
     Sorts a list of numbers using bubble sort algorithm
     Args:
@@ -12,11 +12,9 @@ def bubble_sort(initial_list, constants):
     Returns:
         initial_list (list): sorted list of numbers
     """
-    for i in range(len(initial_list) - 1):
-        for j in range(len(initial_list) - 1):
-            if initial_list[j] > initial_list[j + 1]:
-                initial_list[j], initial_list[j + 1] = initial_list[j + 1], initial_list[j]
-                print_items(initial_list, constants)
-                time.sleep(0.9)
-                os.system('clear')
-    return initial_list
+    for i in range(len(unord_list) - 1):
+        for j in range(len(unord_list) - 1):
+            if unord_list[j] > unord_list[j + 1]:
+                unord_list[j], unord_list[j + 1] = unord_list[j + 1], unord_list[j]
+
+    return unord_list
