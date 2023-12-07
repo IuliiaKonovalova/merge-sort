@@ -17,4 +17,11 @@ def insertion_sort_animation(list_data, constants):
     return list_data
 
 
-
+def printing_animation(temp, list_data, constants):
+    os.system('clear')
+    print("INSERTION SORT ANIMATION")
+    print("\n TEMP: ", temp)
+    print_temp_item(temp, list_data, constants)
+    print("\n Sorting...")
+    print_items(list_data, constants)
+    time.sleep(0.9)
