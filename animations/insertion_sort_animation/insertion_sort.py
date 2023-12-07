@@ -5,6 +5,13 @@ from constant_dictionary import *
 
 
 def insertion_sort_animation(list_data, constants):
+    """
+    Sorts a list of numbers using insertion sort algorithm
+    Args:
+        initial_list (list): list of numbers
+    Returns:
+        initial_list (list): sorted list of numbers
+    """
     for scan_index in range(1, len(list_data)):
         temp = list_data[scan_index]
         min_index = scan_index
@@ -18,6 +25,13 @@ def insertion_sort_animation(list_data, constants):
 
 
 def printing_animation(temp, list_data, constants):
+    """
+    Prints the animation of insertion sort
+    Args:
+        initial_list (list): list of numbers
+    Returns:
+        initial_list (list): sorted list of numbers
+    """
     os.system('clear')
     print("INSERTION SORT ANIMATION")
     print("\n TEMP: ", temp)
