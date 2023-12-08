@@ -1,15 +1,15 @@
-from colorama import Fore, Back, Style
+from colorama import Fore
 from time import sleep
 
 
 def display_merge_sort_code():
     print(
         f"""
-{Fore.BLUE}def {Fore.WHITE}merge_sort_animation{Fore.YELLOW}({Fore.WHITE}list{Fore.YELLOW}){Fore.WHITE}:
+{Fore.BLUE}def {Fore.WHITE}merge_sort_animation{Fore.YELLOW}({Fore.WHITE}initial_list{Fore.YELLOW}){Fore.WHITE}:
 
-    {Fore.BLUE}if {Fore.WHITE}len{Fore.YELLOW}({Fore.WHITE}list{Fore.YELLOW}){Fore.WHITE} <= 1:
-        {Fore.BLUE}return {Fore.WHITE}list
-    left_half, right_half = split_list{Fore.YELLOW}({Fore.WHITE}list{Fore.YELLOW}){Fore.WHITE}
+    {Fore.BLUE}if {Fore.WHITE}len{Fore.YELLOW}({Fore.WHITE}initial_list{Fore.YELLOW}){Fore.WHITE} <= 1:
+        {Fore.BLUE}return {Fore.WHITE}initial_list
+    left_half, right_half = split_list{Fore.YELLOW}({Fore.WHITE}initial_list{Fore.YELLOW}){Fore.WHITE}
     left = merge_sort_animation{Fore.YELLOW}({Fore.WHITE}left_half{Fore.YELLOW}){Fore.WHITE}
     right = merge_sort_animation{Fore.YELLOW}({Fore.WHITE}right_half{Fore.YELLOW}){Fore.WHITE}
     {Fore.BLUE}return{Fore.WHITE} merge{Fore.YELLOW}({Fore.WHITE}left, right{Fore.YELLOW}){Fore.WHITE}
