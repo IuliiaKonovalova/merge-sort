@@ -137,3 +137,18 @@ def show_bubble_sort_with_constants(constants):
     """
     )
 
+
+def show_bubble_sort_animation_with_constants(constants):
+    """
+    Tests the merge sort algorithm with the constants dictionary
+    """
+    sort_algorithm_name = "BUBBLE SORT"
+    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    temp_list = unsorted_list.copy()
+    print(
+        f"""
+    To compare:
+    Sorted list: {bubble_sort_animation(unsorted_list, constants)}
+    Initial list: {temp_list}
+    """
+    )
