@@ -18,13 +18,21 @@ def bubble_sort(unordered_list, constants):
             input("Enter Press Enter to continue...")
             if unordered_list[j] > unordered_list[j + 1]:
                 print_temp_item(unordered_list[j], unordered_list, constants)
-                print_temp_item(unordered_list[j + 1], unordered_list, constants)
+                print_temp_item(
+                    unordered_list[j + 1],
+                    unordered_list,
+                    constants
+                )
                 unordered_list[j], unordered_list[
                     j + 1
                 ] = unordered_list[j + 1], unordered_list[j]
                 print("Swapping values")
                 print_temp_item(unordered_list[j], unordered_list, constants)
-                print_temp_item(unordered_list[j + 1], unordered_list, constants)
+                print_temp_item(
+                    unordered_list[j + 1],
+                    unordered_list,
+                    constants
+                )
                 print("\nLIST now: ")
                 print_list_with_pointers(unordered_list, i, j)
                 print_items(unordered_list, constants)
