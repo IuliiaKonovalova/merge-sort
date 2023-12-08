@@ -33,6 +33,14 @@ def bubble_sort(unordered_list, constants):
 
 
 def print_list_with_pointers(unordered_list, i, j):
+    """
+    Prints the items in a list
+    Args:
+        keys (list): list of numbers
+        constants_dict (dict): dictionary of constants
+    Returns:
+        None
+    """
     print("[", end="")
     last_index = len(unordered_list) - 1
     for k in range(len(unordered_list)):
