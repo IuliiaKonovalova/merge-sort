@@ -48,20 +48,38 @@ def print_list_with_pointers(unordered_list, i, j):
                         end=", "
                     )
                 elif k == j:
-                    print(f"""{Fore.BLUE}{unordered_list[k]}{Fore.WHITE}""", end=", ")
+                    print(
+                        f"""{Fore.BLUE}{unordered_list[k]}{Fore.WHITE}""",
+                        end=", "
+                    )
                 elif k == j + 1:
-                    print(f"""{Fore.MAGENTA}{unordered_list[k]}{Fore.WHITE}""", end=", ")
+                    print(
+                        f"""{Fore.MAGENTA}{unordered_list[k]}{Fore.WHITE}""",
+                        end=", "
+                    )
                 else:
                     print(unordered_list[k], end=", ")
             elif k == last_index:
                 if k == i and i == j:
-                    print(f"""{Fore.RED}{unordered_list[k]}{Fore.WHITE}""", end="")
+                    print(
+                        f"""{Fore.RED}{unordered_list[k]}{Fore.WHITE}""",
+                        end=""
+                    )
                 elif k == i:
-                    print(f"""{Fore.GREEN}{unordered_list[k]}{Fore.WHITE}""", end="")
+                    print(
+                        f"""{Fore.GREEN}{unordered_list[k]}{Fore.WHITE}""",
+                        end=""
+                    )
                 elif k == j:
-                    print(f"""{Fore.BLUE}{unordered_list[k]}{Fore.WHITE}""", end="")
+                    print(
+                        f"""{Fore.BLUE}{unordered_list[k]}{Fore.WHITE}""",
+                        end=""
+                    )
                 elif k == j + 1:
-                    print(f"""{Fore.MAGENTA}{unordered_list[k]}{Fore.WHITE}""", end="")
+                    print(
+                        f"""{Fore.MAGENTA}{unordered_list[k]}{Fore.WHITE}""",
+                        end=""
+                    )
                 else:
                     print(unordered_list[k], end="")
     print("]")
