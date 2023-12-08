@@ -97,7 +97,13 @@ def show_insertion_sort_with_constants(constants):
     sort_algorithm_name = "INSERTION SORT"
     temp_list = unsorted_list.copy()
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
-    print("Sorted list: ", insertion_sort(unsorted_list, constants))
+    print(
+        f"""
+    To compare:
+    Sorted list: {insertion_sort(unsorted_list, constants)}
+    Initial list: {temp_list}
+    """
+    )
 
 
 def show_insertion_sort_animation_with_constants(constants):
