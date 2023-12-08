@@ -84,19 +84,13 @@ def show_selection_sort_animation_with_constants(constants):
     )
 
 
-def show_bubble_sort_with_constants(constants):
+def show_insertion_sort_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
     """
-    unsorted_list = generate_unsorted_list_from_constants(constants)
     temp_list = unsorted_list.copy()
-    print(
-        f"""
-    To compare:
-    Sorted list: {bubble_sort(unsorted_list, constants)}
-    Initial list: {temp_list}
-    """
-    )
+    unsorted_list = generate_unsorted_list_from_constants(constants)
+    print("Sorted list: ", insertion_sort(unsorted_list, constants))
 
 
 def show_insertion_sort_animation_with_constants(constants):
@@ -105,8 +99,10 @@ def show_insertion_sort_animation_with_constants(constants):
     """
     unsorted_list = generate_unsorted_list_from_constants(constants)
     temp_list = unsorted_list.copy()
-    print("insertion_sort_animation: ")
-    print("Sorted list: ", insertion_sort_animation(unsorted_list, constants))
-    print("Initial list: ", temp_list)
-
-
+    print(
+        f"""
+    To compare:
+    Sorted list: {insertion_sort_animation(unsorted_list, constants)}
+    Initial list: {temp_list}
+    """
+    )
