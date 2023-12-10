@@ -2,6 +2,10 @@ from colorama import Fore
 
 
 def display_selection_sort_code():
+    """
+    Prints the code for the selection sort algorithm
+    with colorama
+    """
     print(
         f"""
 {Fore.BLUE}def{Fore.WHITE} selection_sort{Fore.YELLOW}({Fore.WHITE}list_data, constants{Fore.YELLOW}){Fore.WHITE}:
