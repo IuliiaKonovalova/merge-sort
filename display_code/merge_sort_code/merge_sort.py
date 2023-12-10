@@ -3,6 +3,10 @@ from time import sleep
 
 
 def display_merge_sort_code():
+    """
+    Prints the code for the merge sort algorithm
+    with colorama
+    """
     print(
         f"""
 {Fore.BLUE}def {Fore.WHITE}merge_sort_animation{Fore.YELLOW}({Fore.WHITE}initial_list{Fore.YELLOW}){Fore.WHITE}:
