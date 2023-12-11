@@ -3,13 +3,21 @@ from colorama import Fore
 
 
 def quick_sort(unsorted_list, constants, temp_list):
-    # temp_list
-    if len(unsorted_list) <= 1:  # Base case: If the unsorted_listay has 0 or 1 element, it is already sorted
+    """
+    Sorts a list of numbers using quick sort algorithm, recursively
+    Args:
+        initial_list (list): list of numbers
+        constants_dict (dict): dictionary of constants
+        temp_list (list): list of numbers
+    Returns:
+        initial_list (list): sorted list of numbers
+    """
+    if len(unsorted_list) <= 1:
         return unsorted_list
     else:
         input("Press Press Enter to continue...")
         print("Entering quick sort")
-        pivot = unsorted_list[0]  # Choosing the first element as the pivot
+        pivot = unsorted_list[0]
         print(f"""{Fore.GREEN}Pivot: {pivot}{Fore.WHITE}""")
         if len(unsorted_list) > 0:
             
@@ -17,15 +25,13 @@ def quick_sort(unsorted_list, constants, temp_list):
             if len(unsorted_list) != len(temp_list):
                 print_items(unsorted_list, constants)
                 print()
-            # print(f"""Less than pivot: {Fore.GREEN}{less_than_pivot}{Fore.WHITE}""")
-        less_than_pivot = [x for x in unsorted_list[1:] if x <= pivot]  # Elements less than or equal to pivot
+        less_than_pivot = [x for x in unsorted_list[1:] if x <= pivot]
         if len(less_than_pivot) > 0:
             print(f"""Less than pivot: {Fore.YELLOW}{less_than_pivot}{Fore.WHITE}""")
             print_items(less_than_pivot, constants)
         else:
             print(f"""Less than pivot: {Fore.YELLOW}{less_than_pivot}{Fore.WHITE}""")
-            # print("Empty")
-        greater_than_pivot = [x for x in unsorted_list[1:] if x > pivot]  # Elements greater than pivot
+        greater_than_pivot = [x for x in unsorted_list[1:] if x > pivot]
         if len(greater_than_pivot) > 0:
             print(f"""Greater than pivot: {Fore.MAGENTA}{greater_than_pivot}{Fore.WHITE}""")
             print_items(greater_than_pivot, constants)
@@ -38,7 +44,6 @@ def quick_sort(unsorted_list, constants, temp_list):
             print(f"""Merged list: {Fore.CYAN}{merged_list}{Fore.WHITE}""")
             print_items(merged_list, constants)
             print()
-        # print_items(get_whole_list, constants)
         return quick_sort(less_than_pivot, constants, temp_list) + [pivot] + quick_sort(greater_than_pivot, constants, temp_list)
 
 
