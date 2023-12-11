@@ -79,3 +79,16 @@ def print_list_with_pivot(unsorted_list, pivot, constants):
     print("]")
 
 
+
+def get_whole_list(less_than_pivot, pivot, greater_than_pivot):
+    # create a list that contains the less_than_pivot, pivot, and greater_than_pivot
+    # unpack the less_than_pivot, pivot, and greater_than_pivot
+    new_list = []
+    for i in less_than_pivot:
+        new_list.append(i)
+    # new_list.append(less_than_pivot)
+    new_list.append(pivot)
+    for i in greater_than_pivot:
+        new_list.append(i)
+    # new_list.append(greater_than_pivot)
+    return new_list
