@@ -1,7 +1,6 @@
 import os
-import time
-from print_items import print_items, print_temp_item
-from constant_dictionary import *
+from time import sleep
+from tools.print_items import *
 
 
 def insertion_sort_animation(list_data, constants):
@@ -38,4 +37,4 @@ def printing_animation(temp, list_data, constants):
     print_temp_item(temp, list_data, constants)
     print("\n Sorting...")
     print_items(list_data, constants)
-    time.sleep(0.9)
+    sleep(0.9)
