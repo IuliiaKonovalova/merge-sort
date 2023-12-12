@@ -6,6 +6,13 @@ from tools.constant_dictionary import *
 
 
 def selection_sort(list_data, constants):
+    """
+    Sorts a list of numbers using selection sort algorithm
+    Args:
+        initial_list (list): list of numbers
+    Returns:
+        initial_list (list): sorted list of numbers
+    """
     headers = ["scan_index", "1st POINTER", "2nd POINTER"]
     for scan_index in range(0, len(list_data)):
         table_data = []
@@ -27,7 +34,9 @@ def selection_sort(list_data, constants):
                 table_data.append([scan_index, min_index, comp_index])
                 print(tabulate(table_data, headers=headers))
         if min_index != scan_index:
-            list_data[scan_index], list_data[min_index] = list_data[min_index], list_data[scan_index]
+            list_data[scan_index], list_data[min_index] = (
+                list_data[min_index], list_data[scan_index]
+            )
             print("\n")
             print("LIST DATA AFTER SORT: ", list_data)
             print_items(list_data, constants)
