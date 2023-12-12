@@ -1,17 +1,17 @@
-from colorama import Fore
+from tools.colorama_constants import *
 
 
 def display_quick_sort_code():
     """ Displays the code for the quick sort algorithm """
     print(
         f"""
-{Fore.BLUE}def{Fore.WHITE} quick_sort{Fore.YELLOW}({Fore.WHITE}arr{Fore.YELLOW}){Fore.WHITE}:
-    {Fore.BLUE}if{Fore.WHITE} len{Fore.YELLOW}({Fore.WHITE}arr{Fore.YELLOW}){Fore.WHITE} <= 1:
-        {Fore.BLUE}return{Fore.WHITE} arr
-    {Fore.BLUE}else{Fore.WHITE}:
-        pivot = arr{Fore.YELLOW}[{Fore.WHITE}[0{Fore.YELLOW}]{Fore.WHITE}
-        less_than_pivot = {Fore.YELLOW}[{Fore.WHITE}x for x in arr{Fore.YELLOW}[{Fore.WHITE}1:{Fore.YELLOW}]{Fore.WHITE} if x <= pivot{Fore.YELLOW}]{Fore.WHITE}
-        greater_than_pivot = {Fore.YELLOW}[{Fore.WHITE}x for x in arr{Fore.YELLOW}[{Fore.WHITE}1:{Fore.YELLOW}]{Fore.WHITE} if x > pivot{Fore.YELLOW}]{Fore.WHITE}
-        {Fore.BLUE}return{Fore.WHITE} quick_sort{Fore.YELLOW}({Fore.WHITE}less_than_pivot{Fore.YELLOW}){Fore.WHITE} + {Fore.YELLOW}[{Fore.WHITE}pivot{Fore.YELLOW}]{Fore.WHITE} + quick_sort{Fore.YELLOW}({Fore.WHITE}greater_than_pivot{Fore.YELLOW}){Fore.WHITE}
+{blue}def{white} quick_sort{yellow}({white}arr{yellow}){white}:
+    {blue}if{white} len{yellow}({white}arr{yellow}){white} <= 1:
+        {blue}return{white} arr
+    {blue}else{white}:
+        pivot = arr{yellow}[{white}[0{yellow}]{white}
+        less_than_pivot = {yellow}[{white}x for x in arr{yellow}[{white}1:{yellow}]{white} if x <= pivot{yellow}]{white}
+        greater_than_pivot = {yellow}[{white}x for x in arr{yellow}[{white}1:{yellow}]{white} if x > pivot{yellow}]{white}
+        {blue}return{white} quick_sort{yellow}({white}less_than_pivot{yellow}){white} + {yellow}[{white}pivot{yellow}]{white} + quick_sort{yellow}({white}greater_than_pivot{yellow}){white}
     """
     )
