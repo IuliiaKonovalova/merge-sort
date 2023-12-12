@@ -1,6 +1,6 @@
 import os
 from time import sleep
-from colorama import Fore
+from tools.colorama_constants import *
 from tools.print_items import *
 
 
@@ -40,22 +40,22 @@ def print_list_with_pointers(unordered_list, i, j):
             if k != last_index:
                 if k == i and i == j :
                     print(
-                        f"""{Fore.RED}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{red}{unordered_list[k]}{white}""",
                         end=", "
                     )
                 elif k == i:
                     print(
-                        f"""{Fore.GREEN}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{green}{unordered_list[k]}{white}""",
                         end=", "
                     )
                 elif k == j:
                     print(
-                        f"""{Fore.BLUE}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{blue}{unordered_list[k]}{white}""",
                         end=", "
                     )
                 elif k == j + 1:
                     print(
-                        f"""{Fore.MAGENTA}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{magenta}{unordered_list[k]}{white}""",
                         end=", "
                     )
                 else:
@@ -63,22 +63,22 @@ def print_list_with_pointers(unordered_list, i, j):
             elif k == last_index:
                 if k == i and i == j:
                     print(
-                        f"""{Fore.RED}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{red}{unordered_list[k]}{white}""",
                         end=""
                     )
                 elif k == i:
                     print(
-                        f"""{Fore.GREEN}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{green}{unordered_list[k]}{white}""",
                         end=""
                     )
                 elif k == j:
                     print(
-                        f"""{Fore.BLUE}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{blue}{unordered_list[k]}{white}""",
                         end=""
                     )
                 elif k == j + 1:
                     print(
-                        f"""{Fore.MAGENTA}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{magenta}{unordered_list[k]}{white}""",
                         end=""
                     )
                 else:
