@@ -19,7 +19,7 @@ def main():
     # numbers = string_to_list(numbers)
     # test_merge_sort(numbers)
 
-    options = ['1. Merge Sort', '2. Selection Sort', '3. Insertion Sort', '4. Bubble Sort', '5. Quit']
+    options = ['1. Merge Sort', '2. Selection Sort', '3. Insertion Sort', '4. Bubble Sort', '5. Quick Sort', '6. Quit']
     main_menu = TerminalMenu(options)
     algorithm_options = [
         '1. Animation',
@@ -172,6 +172,24 @@ def main():
             elif algorithm_choice == '3. Code':
                 print(f'''CODE''')
                 display_bubble_sort_code()
+        elif options_choice == '5. Quick Sort':
+            print(f'''QUICK SORT''')
+            algorithm_options_index = algorithm_options_menu.show()
+            algorithm_choice = algorithm_options[algorithm_options_index]
+            if algorithm_choice == '1. Animation':
+                list_length_options_index = list_length_options_menu.show()
+                list_length_options_choice = list_length_options[list_length_options_index]
+                print(f'''ANIMATION''')
+                if list_length_options_choice == '1. Yellow to red':
+                    print(f'''YELLOW TO RED''')
+                    show_quick_sort_animation_with_constants(constants_1)
+                elif list_length_options_choice == '2. Short version':
+                    print(f'''SHORT VERSION''')
+                    show_quick_sort_animation_with_constants(constants_2)
+                elif list_length_options_choice == '3. Full version':
+                    print(f'''FULL VERSION''')
+                    show_quick_sort_animation_with_constants(constants_3)
+
 
 
 if __name__ == "__main__":
