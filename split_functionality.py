@@ -1,4 +1,4 @@
-from print_items import print_items
+from tools.print_items import print_items
 
 
 def split_list(initial_list, constants):
@@ -19,5 +19,4 @@ def split_list(initial_list, constants):
     right_part = initial_list[mid_point:]
     print("\n RIGHT: ", right_part)
     print_items(right_part, constants)
-
     return left_part, right_part
