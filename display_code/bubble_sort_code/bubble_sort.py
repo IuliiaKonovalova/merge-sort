@@ -2,6 +2,7 @@ from tools.colorama_constants import *
 
 
 def display_bubble_sort_code():
+    """ Displays the code for the bubble sort algorithm """
     print(
         f"""
 {blue}def{white} bubble_sort{yellow}({white}initial_list{yellow}){white}:
