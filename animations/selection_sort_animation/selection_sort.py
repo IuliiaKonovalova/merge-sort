@@ -4,8 +4,14 @@ from tools.print_items import print_items, print_temp_item
 from tools.constant_dictionary import *
 
 
-
 def selection_sort_animation(list_data, constants):
+    """
+    Sorts a list of numbers using selection sort algorithm
+    Args:
+        initial_list (list): list of numbers
+    Returns:
+        initial_list (list): sorted list of numbers
+    """
     for scan_index in range(0, len(list_data)):
         min_index = scan_index
         print("SELECTION SORT ANIMATION")
@@ -23,6 +29,13 @@ def selection_sort_animation(list_data, constants):
 
 
 def printing_animation(min_index, list_data, constants):
+    """
+    Prints the animation of selection sort
+    Args:
+        initial_list (list): list of numbers
+    Returns:
+        initial_list (list): sorted list of numbers
+    """
     os.system('clear')
     print("SELECTION SORT ANIMATION")
     print("\n MIN_INDEX")
@@ -31,4 +44,3 @@ def printing_animation(min_index, list_data, constants):
     print("LIST DATA AFTER SORT: ", list_data)
     print_items(list_data, constants)
     time.sleep(0.9)
-    
