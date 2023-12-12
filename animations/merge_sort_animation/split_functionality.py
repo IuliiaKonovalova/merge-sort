@@ -1,6 +1,6 @@
-import time
+from time import sleep
 import os
-from print_items import print_items
+from tools.print_items import print_items
 
 
 def split_list(initial_list, constants):
@@ -23,7 +23,7 @@ def split_list(initial_list, constants):
     print("\n RIGHT: ", right_part)
     print_items(right_part, constants)
     print("\n")
-    time.sleep(1)
+    sleep(1)
     os.system('clear')
 
     return left_part, right_part
