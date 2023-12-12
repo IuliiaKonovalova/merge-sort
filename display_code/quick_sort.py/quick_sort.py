@@ -2,6 +2,7 @@ from colorama import Fore
 
 
 def display_quick_sort_code():
+    """ Displays the code for the quick sort algorithm """
     print(
         f"""
 {Fore.BLUE}def{Fore.WHITE} quick_sort{Fore.YELLOW}({Fore.WHITE}arr{Fore.YELLOW}){Fore.WHITE}:
@@ -14,4 +15,3 @@ def display_quick_sort_code():
         {Fore.BLUE}return{Fore.WHITE} quick_sort{Fore.YELLOW}({Fore.WHITE}less_than_pivot{Fore.YELLOW}){Fore.WHITE} + {Fore.YELLOW}[{Fore.WHITE}pivot{Fore.YELLOW}]{Fore.WHITE} + quick_sort{Fore.YELLOW}({Fore.WHITE}greater_than_pivot{Fore.YELLOW}){Fore.WHITE}
     """
     )
-display_quick_sort_code()
