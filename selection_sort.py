@@ -5,7 +5,6 @@ from print_items import print_items
 from constant_dictionary import *
 
 
-
 def selection_sort(list_data, constants):
     headers = ["scan_index", "1st POINTER", "2nd POINTER"]
     for scan_index in range(0, len(list_data)):
@@ -29,8 +28,6 @@ def selection_sort(list_data, constants):
                 print(tabulate(table_data, headers=headers))
         if min_index != scan_index:
             list_data[scan_index], list_data[min_index] = list_data[min_index], list_data[scan_index]
-
-
             print("\n")
             print("LIST DATA AFTER SORT: ", list_data)
             print_items(list_data, constants)
