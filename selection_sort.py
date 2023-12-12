@@ -1,8 +1,8 @@
 import time
 import os
 from tabulate import tabulate
-from print_items import print_items
-from constant_dictionary import *
+from tools.print_items import print_items
+from tools.constant_dictionary import *
 
 
 def selection_sort(list_data, constants):
