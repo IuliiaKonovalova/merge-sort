@@ -1,9 +1,10 @@
 from simple_term_menu import TerminalMenu
-from constant_dictionary import *
+from tools.constant_dictionary import *
 from test_cases import *
 from display_code.merge_sort_code.merge_sort import *
 from display_code.selection_sort_code.selection_sort import *
 from display_code.insertion_sort_code.insertion_sort import *
+from display_code.bubble_sort_code.bubble_sort import *
 
 
 def main():
@@ -168,7 +169,9 @@ def main():
                 elif list_length_options_choice == '3. Full version':
                     print(f'''FULL VERSION''')
                     show_bubble_sort_with_constants(constants_3)
-
+            elif algorithm_choice == '3. Code':
+                print(f'''CODE''')
+                display_bubble_sort_code()
 
 
 if __name__ == "__main__":
