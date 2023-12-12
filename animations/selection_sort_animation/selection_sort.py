@@ -1,7 +1,7 @@
 import time
 import os
-from print_items import print_items, print_temp_item
-from constant_dictionary import *
+from tools.print_items import print_items, print_temp_item
+from tools.constant_dictionary import *
 
 
 
@@ -15,7 +15,9 @@ def selection_sort_animation(list_data, constants):
                 min_index = comp_index
                 printing_animation(min_index, list_data, constants)
         if min_index != scan_index:
-            list_data[scan_index], list_data[min_index] = list_data[min_index], list_data[scan_index]
+            list_data[scan_index], list_data[min_index] = (
+                list_data[min_index], list_data[scan_index]
+            )
             printing_animation(min_index, list_data, constants)
     return list_data
 
@@ -29,3 +31,4 @@ def printing_animation(min_index, list_data, constants):
     print("LIST DATA AFTER SORT: ", list_data)
     print_items(list_data, constants)
     time.sleep(0.9)
+    
