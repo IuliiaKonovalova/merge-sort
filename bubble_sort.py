@@ -1,4 +1,4 @@
-from print_items import *
+from tools.print_items import *
 from colorama import Fore
 
 
@@ -15,7 +15,7 @@ def bubble_sort(unordered_list, constants):
         for j in range(len(unordered_list) - 1):
             print(f"""Index in j:  {Fore.BLUE}{j}{Fore.WHITE}""")
             print_list_with_pointers(unordered_list, i, j)
-            input("Enter Press Enter to continue...")
+            input("Press Enter to continue...")
             if unordered_list[j] > unordered_list[j + 1]:
                 print_temp_item(unordered_list[j], unordered_list, constants)
                 print_temp_item(
@@ -36,7 +36,7 @@ def bubble_sort(unordered_list, constants):
                 print("\nLIST now: ")
                 print_list_with_pointers(unordered_list, i, j)
                 print_items(unordered_list, constants)
-                input("Enter Press Enter to continue...")
+                input("Press Enter to continue...")
     return unordered_list
 
 
