@@ -1,3 +1,4 @@
+"""This file contains constants for colorama."""
 from colorama import Fore
 
 
