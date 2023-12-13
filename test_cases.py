@@ -16,7 +16,11 @@ from animations.quick_sort_animation.quick_sort import *
 def generate_unsorted_list_from_constants(constants, sort_algorithm_name):
     """
     Generates an unsorted list of numbers
-    :return: an unsorted list of numbers
+    Args:
+        constants (dict): dictionary of constants
+        sort_algorithm_name (str): name of the sort algorithm
+    Returns:
+        unsorted_list (list): unsorted list of numbers
     """
     unsorted_list = []
     for key in constants:
@@ -31,6 +35,10 @@ def generate_unsorted_list_from_constants(constants, sort_algorithm_name):
 def show_merge_sort_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "MERGE SORT"
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
@@ -47,6 +55,10 @@ def show_merge_sort_with_constants(constants):
 def show_merge_sort_animation_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "MERGE SORT"
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
@@ -63,6 +75,10 @@ def show_merge_sort_animation_with_constants(constants):
 def show_selection_sort_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "SELECTION SORT"
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
@@ -79,6 +95,10 @@ def show_selection_sort_with_constants(constants):
 def show_selection_sort_animation_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "SELECTION SORT"
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
@@ -95,6 +115,10 @@ def show_selection_sort_animation_with_constants(constants):
 def show_insertion_sort_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "INSERTION SORT"
     temp_list = unsorted_list.copy()
@@ -111,6 +135,10 @@ def show_insertion_sort_with_constants(constants):
 def show_insertion_sort_animation_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "INSERTION SORT"
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
@@ -127,6 +155,10 @@ def show_insertion_sort_animation_with_constants(constants):
 def show_bubble_sort_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "BUBBLE SORT"
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
@@ -143,6 +175,10 @@ def show_bubble_sort_with_constants(constants):
 def show_bubble_sort_animation_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "BUBBLE SORT"
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
@@ -159,6 +195,10 @@ def show_bubble_sort_animation_with_constants(constants):
 def show_quick_sort_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "QUICK SORT"
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
@@ -179,6 +219,10 @@ def show_quick_sort_with_constants(constants):
 def show_quick_sort_animation_with_constants(constants):
     """
     Tests the merge sort algorithm with the constants dictionary
+    Args:
+        constants (dict): dictionary of constants
+    Returns:
+        None
     """
     sort_algorithm_name = "QUICK SORT"
     unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
