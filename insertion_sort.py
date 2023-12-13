@@ -4,6 +4,14 @@ from tools.print_items import print_items
 
 
 def insertion_sort(list_data, constants):
+    """
+    Sorts a list of numbers using the insertion sort algorithm
+    Args:
+        list_data (list): list of numbers
+        constants (dict): dictionary of constants
+    Returns:
+        list: sorted list of numbers
+    """
     for scan_index in range(1, len(list_data)):
         print("SCAN_INDEX: ", scan_index)
         temp = list_data[scan_index]
