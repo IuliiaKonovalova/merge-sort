@@ -5,6 +5,7 @@ from display_code.merge_sort_code.merge_sort import *
 from display_code.selection_sort_code.selection_sort import *
 from display_code.insertion_sort_code.insertion_sort import *
 from display_code.bubble_sort_code.bubble_sort import *
+from display_code.quick_sort_code.quick_sort import *
 
 
 def main():
@@ -37,7 +38,7 @@ def main():
     while quitting is not True:
         options_index = main_menu.show()
         options_choice = options[options_index]
-        if options_choice == '5. Quit':
+        if options_choice == '6. Quit':
             print(f'''QUITTING...''')
             quitting = True
         elif options_choice == '1. Merge Sort':
@@ -202,7 +203,9 @@ def main():
                 elif list_length_options_choice == '3. Full version':
                     print(f'''FULL VERSION''')
                     show_quick_sort_with_constants(constants_3)
-
+            elif algorithm_choice == '3. Code':
+                print(f'''CODE''')
+                display_quick_sort_code()
 
 
 if __name__ == "__main__":
