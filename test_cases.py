@@ -21,7 +21,10 @@ def show_merge_sort_with_constants(constants):
         None
     """
     sort_algorithm_name = "MERGE SORT"
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     temp_list = unsorted_list.copy()
     print(
     f"""
@@ -41,7 +44,10 @@ def show_merge_sort_animation_with_constants(constants):
         None
     """
     sort_algorithm_name = "MERGE SORT"
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     temp_list = unsorted_list.copy()
     print(
     f"""
@@ -61,7 +67,10 @@ def show_selection_sort_with_constants(constants):
         None
     """
     sort_algorithm_name = "SELECTION SORT"
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     temp_list = unsorted_list.copy()
     print(
         f"""
@@ -81,7 +90,10 @@ def show_selection_sort_animation_with_constants(constants):
         None
     """
     sort_algorithm_name = "SELECTION SORT"
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     temp_list = unsorted_list.copy()
     print(
         f"""
@@ -102,7 +114,10 @@ def show_insertion_sort_with_constants(constants):
     """
     sort_algorithm_name = "INSERTION SORT"
     temp_list = unsorted_list.copy()
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     print(
         f"""
     To compare:
@@ -121,7 +136,10 @@ def show_insertion_sort_animation_with_constants(constants):
         None
     """
     sort_algorithm_name = "INSERTION SORT"
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     temp_list = unsorted_list.copy()
     print(
         f"""
@@ -141,7 +159,10 @@ def show_bubble_sort_with_constants(constants):
         None
     """
     sort_algorithm_name = "BUBBLE SORT"
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     temp_list = unsorted_list.copy()
     print(
         f"""
@@ -161,7 +182,10 @@ def show_bubble_sort_animation_with_constants(constants):
         None
     """
     sort_algorithm_name = "BUBBLE SORT"
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     temp_list = unsorted_list.copy()
     print(
         f"""
@@ -181,7 +205,10 @@ def show_quick_sort_with_constants(constants):
         None
     """
     sort_algorithm_name = "QUICK SORT"
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     temp_list = unsorted_list.copy()
     resulted_list = quick_sort(unsorted_list, constants, temp_list)
     print("Final list: ")
@@ -205,7 +232,10 @@ def show_quick_sort_animation_with_constants(constants):
         None
     """
     sort_algorithm_name = "QUICK SORT"
-    unsorted_list = generate_unsorted_list_from_constants(constants, sort_algorithm_name)
+    unsorted_list = generate_unsorted_list_from_constants(
+        constants,
+        sort_algorithm_name
+    )
     temp_list = unsorted_list.copy()
     resulted_list = quick_sort_animation(unsorted_list, constants)
     print("Final list: ")
