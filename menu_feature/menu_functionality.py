@@ -21,16 +21,8 @@ def menu_logic():
     quitting = False
     while quitting is not True:
         options_choice = show_main_menu()
-        if options_choice == '6. Quit':
+        if options_choice == 'Quit':
             print(f'''QUITTING...''')
             quitting = True
-        elif options_choice == '1. Merge Sort':
-            show_algorithm_options_menu('merge sort')
-        elif options_choice == '2. Selection Sort':
-            show_algorithm_options_menu('selection sort')
-        elif options_choice == '3. Insertion Sort':
-            show_algorithm_options_menu('insertion sort')
-        elif options_choice == '4. Bubble Sort':
-            show_algorithm_options_menu('bubble sort')
-        elif options_choice == '5. Quick Sort':
-            show_algorithm_options_menu('quick sort')
+        else:
+            show_algorithm_options_menu(options_choice)
