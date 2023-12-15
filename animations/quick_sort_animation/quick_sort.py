@@ -1,7 +1,8 @@
 import os
 from time import sleep
-from print_items import print_items, print_temp_item  # Assuming these functions help print the items
-from constant_dictionary import *  # Assuming this contains constant values
+from tools.print_items import print_items
+from tools.constant_dictionary import *
+
 
 def quick_sort_animation(arr, constants):
     """
@@ -14,6 +15,7 @@ def quick_sort_animation(arr, constants):
     quick_sort_recursive(arr, 0, len(arr) - 1, constants)
     return arr
 
+
 def quick_sort_recursive(arr, low, high, constants):
     """
     Recursive function for quick sort
@@ -22,6 +24,7 @@ def quick_sort_recursive(arr, low, high, constants):
         pivot_index = partition(arr, low, high, constants)
         quick_sort_recursive(arr, low, pivot_index - 1, constants)
         quick_sort_recursive(arr, pivot_index + 1, high, constants)
+
 
 def partition(arr, low, high, constants):
     """
@@ -38,6 +41,7 @@ def partition(arr, low, high, constants):
     printing_animation(arr, pivot, i + 1, high, low, high, constants)
     return i + 1
 
+
 def printing_animation(arr, pivot, pivot_index, current_index, low, high, constants):
     """ Prints the animation of quick sort """
     os.system('clear')
@@ -48,8 +52,3 @@ def printing_animation(arr, pivot, pivot_index, current_index, low, high, consta
     print("\n High: ", high)
     print_items(arr, constants)
     sleep(0.9)
-
-# Example usage:
-my_list = [12, 4, 5, 6, 7, 3, 1, 15]
-sorted_list = quick_sort_animation(my_list, your_constants)
-print(sorted_list)
