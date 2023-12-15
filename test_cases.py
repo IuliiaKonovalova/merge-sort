@@ -113,11 +113,11 @@ def show_insertion_sort_with_constants(constants):
         None
     """
     sort_algorithm_name = "INSERTION SORT"
-    temp_list = unsorted_list.copy()
     unsorted_list = generate_unsorted_list_from_constants(
         constants,
         sort_algorithm_name
     )
+    temp_list = unsorted_list.copy()
     print(
         f"""
     To compare:
