@@ -77,7 +77,7 @@ def show_list_length_options_menu(algorithm_name, algorithm_option):
             elif list_length_options_choice == '3. Full version':
                 print(f'''FULL VERSION''')
                 show_insertion_sort_with_constants(constants_3)
-    elif algorithm_name == 'Quick sort':
+    elif algorithm_name == 'Quick Sort':
         if algorithm_option == 'animation':
             if list_length_options_choice == '1. Yellow to red':
                 print(f'''YELLOW TO RED''')
@@ -98,7 +98,7 @@ def show_list_length_options_menu(algorithm_name, algorithm_option):
             elif list_length_options_choice == '3. Full version':
                 print(f'''FULL VERSION''')
                 show_quick_sort_with_constants(constants_3)
-    elif algorithm_name == 'Bubble sort':
+    elif algorithm_name == 'Bubble Sort':
         if algorithm_option == 'animation':
             if list_length_options_choice == '1. Yellow to red':
                 print(f'''YELLOW TO RED''')
