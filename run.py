@@ -2,7 +2,7 @@ from menu_feature.menu_functionality import *
 
 
 def main():
-    input("Press Enter to continue...")
+    input("Hit enter to start the program...")
     menu_logic()
 
 
