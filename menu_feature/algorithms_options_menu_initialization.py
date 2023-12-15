@@ -8,6 +8,13 @@ algorithm_options_menu = TerminalMenu(algorithm_options)
 
 
 def show_algorithm_options_menu(algorithm_options_name):
+    """
+    Displays the algorithm options menu
+    Args:
+        algorithm_options_name (str): name of the algorithm
+    Returns:
+        None
+    """
     print(f"""{algorithm_options_name.upper()}""")
     algorithm_options_index = algorithm_options_menu.show()
     algorithm_options_choice = algorithm_options[algorithm_options_index]
