@@ -1,5 +1,5 @@
-from colorama import Fore
 from time import sleep
+from tools.colorama_constants import *
 
 
 def display_merge_sort_code():
@@ -9,48 +9,48 @@ def display_merge_sort_code():
     """
     print(
         f"""
-{Fore.BLUE}def {Fore.WHITE}merge_sort_animation{Fore.YELLOW}({Fore.WHITE}initial_list{Fore.YELLOW}){Fore.WHITE}:
+{blue}def {white}merge_sort_animation{yellow}({white}initial_list{yellow}){white}:
 
-    {Fore.BLUE}if {Fore.WHITE}len{Fore.YELLOW}({Fore.WHITE}initial_list{Fore.YELLOW}){Fore.WHITE} <= 1:
-        {Fore.BLUE}return {Fore.WHITE}initial_list
-    left_half, right_half = split_list{Fore.YELLOW}({Fore.WHITE}initial_list{Fore.YELLOW}){Fore.WHITE}
-    left = merge_sort_animation{Fore.YELLOW}({Fore.WHITE}left_half{Fore.YELLOW}){Fore.WHITE}
-    right = merge_sort_animation{Fore.YELLOW}({Fore.WHITE}right_half{Fore.YELLOW}){Fore.WHITE}
-    {Fore.BLUE}return{Fore.WHITE} merge{Fore.YELLOW}({Fore.WHITE}left, right{Fore.YELLOW}){Fore.WHITE}
+    {blue}if {white}len{yellow}({white}initial_list{yellow}){white} <= 1:
+        {blue}return {white}initial_list
+    left_half, right_half = split_list{yellow}({white}initial_list{yellow}){white}
+    left = merge_sort_animation{yellow}({white}left_half{yellow}){white}
+    right = merge_sort_animation{yellow}({white}right_half{yellow}){white}
+    {blue}return{white} merge{yellow}({white}left, right{yellow}){white}
     """
     )
     sleep(2)
     print(
         f"""
-{Fore.BLUE}def {Fore.WHITE}split_list{Fore.YELLOW}({Fore.WHITE}initial_list{Fore.YELLOW}){Fore.WHITE}:
-    mid_point = len{Fore.YELLOW}({Fore.WHITE}initial_list{Fore.YELLOW}){Fore.WHITE} // 2
-    left_part = initial_list{Fore.YELLOW}[{Fore.WHITE}:mid_point{Fore.YELLOW}]{Fore.WHITE}
-    right_part = initial_list{Fore.YELLOW}[{Fore.WHITE}mid_point:{Fore.YELLOW}]{Fore.WHITE}
-    {Fore.BLUE}return{Fore.WHITE} left_part, right_part
+{blue}def {white}split_list{yellow}({white}initial_list{yellow}){white}:
+    mid_point = len{yellow}({white}initial_list{yellow}){white} // 2
+    left_part = initial_list{yellow}[{white}:mid_point{yellow}]{white}
+    right_part = initial_list{yellow}[{white}mid_point:{yellow}]{white}
+    {blue}return{white} left_part, right_part
     """
     )
     sleep(2)
     print(
         f"""
-{Fore.BLUE}def {Fore.WHITE}merge{Fore.YELLOW}({Fore.WHITE}left, right{Fore.YELLOW}){Fore.WHITE}:
-    sorted_list = {Fore.YELLOW}[]{Fore.WHITE}
+{blue}def {white}merge{yellow}({white}left, right{yellow}){white}:
+    sorted_list = {yellow}[]{white}
     i = 0
     j = 0
-    {Fore.BLUE}while{Fore.WHITE} i < len{Fore.YELLOW}({Fore.WHITE}left{Fore.YELLOW}){Fore.WHITE} and j < len{Fore.YELLOW}({Fore.WHITE}right{Fore.YELLOW}){Fore.WHITE}:
-        {Fore.BLUE}if{Fore.WHITE} left{Fore.YELLOW}[{Fore.WHITE}i{Fore.YELLOW}]{Fore.WHITE} < right{Fore.YELLOW}[{Fore.WHITE}j{Fore.YELLOW}]{Fore.WHITE}:
-            sorted_list.append{Fore.YELLOW}({Fore.WHITE}left{Fore.YELLOW}[{Fore.WHITE}i{Fore.YELLOW}]{Fore.WHITE}{Fore.YELLOW}){Fore.WHITE}
+    {blue}while{white} i < len{yellow}({white}left{yellow}){white} and j < len{yellow}({white}right{yellow}){white}:
+        {blue}if{white} left{yellow}[{white}i{yellow}]{white} < right{yellow}[{white}j{yellow}]{white}:
+            sorted_list.append{yellow}({white}left{yellow}[{white}i{yellow}]{white}{yellow}){white}
             i += 1
-        {Fore.BLUE}else{Fore.WHITE}:
-            sorted_list.append{Fore.YELLOW}({Fore.WHITE}right{Fore.YELLOW}[{Fore.WHITE}j{Fore.YELLOW}]{Fore.WHITE}{Fore.YELLOW}){Fore.WHITE}
+        {blue}else{white}:
+            sorted_list.append{yellow}({white}right{yellow}[{white}j{yellow}]{white}{yellow}){white}
             j += 1
-    {Fore.GREEN}# append the remaining elements from left that was not fully iterated{Fore.WHITE}
-    {Fore.BLUE}while{Fore.WHITE} i < len{Fore.YELLOW}({Fore.WHITE}left{Fore.YELLOW}){Fore.WHITE}:
-        sorted_list.append{Fore.YELLOW}({Fore.WHITE}left{Fore.YELLOW}[{Fore.WHITE}i{Fore.YELLOW}]{Fore.WHITE}{Fore.YELLOW}){Fore.WHITE}
+    {Fore.GREEN}# append the remaining elements from left that was not fully iterated{white}
+    {blue}while{white} i < len{yellow}({white}left{yellow}){white}:
+        sorted_list.append{yellow}({white}left{yellow}[{white}i{yellow}]{white}{yellow}){white}
         i += 1
-    {Fore.GREEN}# append the remaining elements from right that was not fully iterated{Fore.WHITE}
-    {Fore.BLUE}while{Fore.WHITE} j < len{Fore.YELLOW}({Fore.WHITE}right{Fore.YELLOW}){Fore.WHITE}:
-        sorted_list.append{Fore.YELLOW}({Fore.WHITE}right{Fore.YELLOW}[{Fore.WHITE}j{Fore.YELLOW}]{Fore.WHITE}{Fore.YELLOW}){Fore.WHITE}
+    {Fore.GREEN}# append the remaining elements from right that was not fully iterated{white}
+    {blue}while{white} j < len{yellow}({white}right{yellow}){white}:
+        sorted_list.append{yellow}({white}right{yellow}[{white}j{yellow}]{white}{yellow}){white}
         j += 1
-    {Fore.BLUE}return{Fore.WHITE} sorted_list
+    {blue}return{white} sorted_list
     """
     )
