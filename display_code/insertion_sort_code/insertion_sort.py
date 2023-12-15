@@ -2,6 +2,7 @@ from colorama import Fore
 
 
 def display_insertion_sort_code():
+    """ Displays the code for the insertion sort algorithm """
     print(
         f"""
 {Fore.BLUE}def{Fore.WHITE} insertion_sort{Fore.YELLOW}({Fore.WHITE}list_data{Fore.YELLOW}){Fore.WHITE}:
@@ -15,4 +16,3 @@ def display_insertion_sort_code():
     {Fore.BLUE}return{Fore.WHITE} list_data
     """
     )
-display_insertion_sort_code()
