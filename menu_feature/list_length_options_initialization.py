@@ -9,6 +9,14 @@ from display_code.merge_sort_code.merge_sort import display_merge_sort_code
 list_length_options_menu = TerminalMenu(list_length_options)
 
 def show_list_length_options_menu(algorithm_name, algorithm_option):
+    """
+    Displays the list length options menu
+    Args:
+        algorithm_name (str): name of the algorithm
+        algorithm_option (str): option of the algorithm
+    Returns:
+        None
+    """
     print(f"""{algorithm_name.upper()} - {algorithm_option.upper()}""")
     list_length_options_index = list_length_options_menu.show()
     list_length_options_choice = list_length_options[list_length_options_index]
