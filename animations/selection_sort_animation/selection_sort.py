@@ -17,22 +17,58 @@ def selection_sort_animation(list_data, constants):
         min_index = scan_index
         print("SELECTION SORT ANIMATION")
         comp_index = 0
-        printing_animation(min_index, scan_index, comp_index, list_data, constants)
+        printing_animation(
+          min_index,
+          scan_index,
+          comp_index,
+          list_data,
+          constants
+        )
         for comp_index in range(scan_index + 1, len(list_data)):
-            printing_animation(min_index, scan_index, comp_index, list_data, constants)
+            printing_animation(
+                min_index,
+                scan_index,
+                comp_index,
+                list_data,
+                constants
+            )
             if list_data[comp_index] < list_data[min_index]:
-                printing_animation(min_index, scan_index, comp_index, list_data, constants)
+                printing_animation(
+                    min_index,
+                    scan_index,
+                    comp_index,
+                    list_data,
+                    constants
+                )
                 min_index = comp_index
-                printing_animation(min_index, scan_index, comp_index, list_data, constants)
+                printing_animation(
+                    min_index,
+                    scan_index,
+                    comp_index,
+                    list_data,
+                    constants
+                )
         if min_index != scan_index:
             list_data[scan_index], list_data[min_index] = (
                 list_data[min_index], list_data[scan_index]
             )
-            printing_animation(min_index, scan_index, comp_index, list_data, constants)
+            printing_animation(
+                min_index,
+                scan_index,
+                comp_index,
+                list_data,
+                constants
+            )
     return list_data
 
 
-def printing_animation(min_index, scan_index, comp_index, list_data, constants):
+def printing_animation(
+    min_index,
+    scan_index,
+    comp_index,
+    list_data,
+    constants
+):
     """
     Prints the animation of selection sort
     Args:
@@ -67,11 +103,17 @@ def print_list_with_pointers(list_data, scan_index, comp_index, min_index):
     for k, item in enumerate(list_data):
         if k != last_index:
             if k == scan_index and min_index == scan_index:
-                print(term.on_bright_yellow(term.green(str(item))), end=", ")
+                print(
+                  term.on_bright_yellow(term.green(str(item))),
+                  end=", "
+                )
             elif k == scan_index and min_index != scan_index:
                 print(b_forestgreen(str(item)), end=", ")
             elif k == min_index and min_index == comp_index:
-                print(term.on_bright_yellow(term.darkviolet(str(item))), end=", ")
+                print(
+                  term.on_bright_yellow(term.darkviolet(str(item))),
+                  end=", "
+                )
             elif k == min_index:
                 print(b_yellow(str(item)), end=", ")
             elif k == comp_index:
@@ -84,7 +126,10 @@ def print_list_with_pointers(list_data, scan_index, comp_index, min_index):
             elif k == scan_index and min_index != scan_index:
                 print(b_forestgreen(str(item)), end="")
             elif k == min_index and min_index == comp_index:
-                print(term.on_bright_yellow(term.darkviolet(str(item))), end="")
+                print(
+                  term.on_bright_yellow(term.darkviolet(str(item))),
+                  end=""
+                )
             elif k == min_index:
                 print(b_yellow(str(item)), end="")
             elif k == comp_index:
