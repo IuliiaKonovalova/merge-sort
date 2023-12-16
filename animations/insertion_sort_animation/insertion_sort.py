@@ -1,6 +1,7 @@
 import os
 from time import sleep
 from tools.print_items import *
+from tools.colorama_constants import *
 
 
 def insertion_sort_animation(list_data, constants):
@@ -36,9 +37,59 @@ def printing_animation(temp, list_data, constants, min_index, scan_index):
     print("INSERTION SORT ANIMATION")
     print("\n TEMP: ", temp)
     print_temp_item(temp, list_data, constants)
+    print_list_with_pointers(list_data, min_index, scan_index)
     print("\n LIST: ", list_data)
     print("\n MIN INDEX: ", min_index)
     print("\n SCAN INDEX: ", scan_index)
     print("\n Sorting...")
     print_items(list_data, constants)
     sleep(1.9)
+
+
+def print_list_with_pointers(list_data, min_index, scan_index):
+    print("[", end="")
+    last_index = len(list_data) - 1
+    for k in range(len(list_data)):
+        if k != last_index:
+            if k == min_index and min_index == scan_index :
+                print(
+                    f"""{term.on_bright_yellow(term.green(str(list_data[k])))}""",
+                    end=", "
+                )
+            elif k == min_index:
+                print(
+                    f"""{b_yellow(str(list_data[k]))}{white}""",
+                    end=", "
+                )
+            elif k == scan_index:
+                print(
+                    f"""{b_forestgreen(str(list_data[k]))}{white}""",
+                    end=", "
+                )
+            else:
+                print(
+                    f"""{white}{list_data[k]}{white}""",
+                    end=", "
+                )
+        else:
+            if k == min_index and min_index == scan_index :
+                print(
+                    f"""{term.on_bright_yellow(term.green(str(list_data[k])))}""",
+                    end=""
+                )
+            elif k == min_index:
+                print(
+                    f"""{b_yellow(str(list_data[k]))}{white}""",
+                    end=""
+                )
+            elif k == scan_index:
+                print(
+                    f"""{b_forestgreen(str(list_data[k]))}{white}""",
+                    end=""
+                )
+            else:
+                print(
+                    f"""{white}{list_data[k]}{white}""",
+                    end=""
+                )
+    print("]")
