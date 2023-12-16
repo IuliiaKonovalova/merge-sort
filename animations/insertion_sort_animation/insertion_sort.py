@@ -48,7 +48,10 @@ def printing_animation(temp, list_data, constants, min_index, scan_index):
         initial_list (list): sorted list of numbers
     """
     os.system('clear')
-    print("INSERTION SORT ANIMATION")
+    print(
+      f"""{yellow}INSERTION SORT ANIMATION{white}
+          """
+    )
     print("\n TEMP: ", temp)
     print_temp_item(temp, list_data, constants)
     print("\n LIST: ", end="")
