@@ -28,6 +28,14 @@ def insertion_sort_animation(list_data, constants):
                 min_index,
                 scan_index
             )
+        printing_animation(temp, list_data, constants, min_index, scan_index)
+        os.system('clear')
+        print(
+      f"""{yellow}INSERTION SORT ANIMATION{white}
+          """
+        )
+        print("LIST DATA AFTER SORT: ")
+        print_items(list_data, constants)
     return list_data
 
 
