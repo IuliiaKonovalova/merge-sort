@@ -16,6 +16,10 @@ def selection_sort_animation(list_data, constants):
     for scan_index in range(0, len(list_data)):
         min_index = scan_index
         print("SELECTION SORT ANIMATION")
+        print(
+      f"""{yellow}SELECTION SORT ANIMATION{white}
+      """
+        )
         comp_index = 0
         printing_animation(
           min_index,
@@ -77,8 +81,12 @@ def printing_animation(
         initial_list (list): sorted list of numbers
     """
     os.system('clear')
-    print("SELECTION SORT ANIMATION")
+    print(
+      f"""{yellow}SELECTION SORT ANIMATION{white}
+      """
+      )
     print("\n MIN_INDEX")
+    
     print_temp_item(min_index, list_data, constants)
     print("\n")
     print("LIST DATA AFTER SORT: ", end="")
