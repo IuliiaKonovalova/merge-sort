@@ -59,6 +59,14 @@ def printing_animation(temp, list_data, constants, min_index, scan_index):
 
 
 def print_list_with_pointers(list_data, min_index, scan_index):
+    """
+    Prints the items in a list with color pointers
+    Args:
+        keys (list): list of numbers
+        constants_dict (dict): dictionary of constants
+    Returns:
+        None
+    """
     print("[", end="")
     last_index = len(list_data) - 1
     for k in range(len(list_data)):
