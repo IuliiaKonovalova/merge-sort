@@ -1,18 +1,18 @@
-from colorama import Fore
+from tools.colorama_constants import *
 
 
 def display_insertion_sort_code():
     """ Displays the code for the insertion sort algorithm """
     print(
         f"""
-{Fore.BLUE}def{Fore.WHITE} insertion_sort{Fore.YELLOW}({Fore.WHITE}list_data{Fore.YELLOW}){Fore.WHITE}:
-    {Fore.BLUE}for{Fore.WHITE} scan_index {Fore.BLUE}in{Fore.WHITE} range{Fore.YELLOW}({Fore.WHITE}1, len{Fore.YELLOW}({Fore.WHITE}list_data{Fore.YELLOW})){Fore.WHITE}:
-        temp = list_data{Fore.YELLOW}[{Fore.WHITE}scan_index{Fore.YELLOW}]{Fore.WHITE}
+{blue}def{white} insertion_sort{yellow}({white}list_data{yellow}){white}:
+    {blue}for{white} scan_index {blue}in{white} range{yellow}({white}1, len{yellow}({white}list_data{yellow})){white}:
+        temp = list_data{yellow}[{white}scan_index{yellow}]{white}
         min_index = scan_index
-        {Fore.BLUE}while{Fore.WHITE} min_index > 0 {Fore.BLUE}and{Fore.WHITE} temp < list_data{Fore.YELLOW}[{Fore.WHITE}min_index - 1{Fore.YELLOW}]{Fore.WHITE}:
-            list_data{Fore.YELLOW}[{Fore.WHITE}min_index{Fore.YELLOW}]{Fore.WHITE} = list_data{Fore.YELLOW}[{Fore.WHITE}min_index - 1{Fore.YELLOW}]{Fore.WHITE}
+        {blue}while{white} min_index > 0 {blue}and{white} temp < list_data{yellow}[{white}min_index - 1{yellow}]{white}:
+            list_data{yellow}[{white}min_index{yellow}]{white} = list_data{yellow}[{white}min_index - 1{yellow}]{white}
             min_index -= 1
-            list_data{Fore.YELLOW}[{Fore.WHITE}min_index{Fore.YELLOW}]{Fore.WHITE}] = temp
-    {Fore.BLUE}return{Fore.WHITE} list_data
+            list_data{yellow}[{white}min_index{yellow}]{white}] = temp
+    {blue}return{white} list_data
     """
     )
