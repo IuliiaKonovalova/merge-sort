@@ -51,10 +51,6 @@ def show_merge_sort_animation_with_constants(constants):
         sort_algorithm_name
     )
     temp_list = unsorted_list.copy()
-    os.system('clear')
-    print("INITIAL LIST: ", temp_list)
-    print_items(unsorted_list, constants)
-    sleep(1.5)
     print(
     f"""
     To compare: 
