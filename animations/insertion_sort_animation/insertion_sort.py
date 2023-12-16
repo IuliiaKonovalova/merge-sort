@@ -20,7 +20,13 @@ def insertion_sort_animation(list_data, constants):
             list_data[min_index] = list_data[min_index - 1]
             min_index -= 1
             list_data[min_index] = temp
-            printing_animation(temp, list_data, constants, min_index, scan_index)
+            printing_animation(
+                temp,
+                list_data,
+                constants,
+                min_index,
+                scan_index
+            )
         printing_animation(temp, list_data, constants, min_index, scan_index)
     return list_data
 
@@ -53,7 +59,9 @@ def print_list_with_pointers(list_data, min_index, scan_index):
         if k != last_index:
             if k == min_index and min_index == scan_index :
                 print(
-                    f"""{term.on_bright_yellow(term.green(str(list_data[k])))}""",
+                    f"""{term.on_bright_yellow(
+                      term.green(str(list_data[k]))
+                    )}""",
                     end=", "
                 )
             elif k == min_index:
@@ -74,7 +82,9 @@ def print_list_with_pointers(list_data, min_index, scan_index):
         else:
             if k == min_index and min_index == scan_index :
                 print(
-                    f"""{term.on_bright_yellow(term.green(str(list_data[k])))}""",
+                    f"""{term.on_bright_yellow(
+                      term.green(str(list_data[k]))
+                    )}""",
                     end=""
                 )
             elif k == min_index:
