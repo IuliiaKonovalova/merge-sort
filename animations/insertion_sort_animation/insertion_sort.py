@@ -53,11 +53,9 @@ def printing_animation(temp, list_data, constants, min_index, scan_index):
     print_temp_item(temp, list_data, constants)
     print("\n LIST: ", end="")
     print_list_with_pointers(list_data, min_index, scan_index)
-    # print("\n MIN INDEX: ", min_index)
-    # print("\n SCAN INDEX: ", scan_index)
     print("\n Sorting...")
     print_items(list_data, constants)
-    sleep(2.9)
+    sleep(0.9)
 
 
 def print_list_with_pointers(list_data, min_index, scan_index):
