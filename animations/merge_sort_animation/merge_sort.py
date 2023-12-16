@@ -1,6 +1,5 @@
 from animations.merge_sort_animation.split_functionality import split_list
 from animations.merge_sort_animation.merge_functionality import merge
-# from constant_dictionary import constants
 
 
 def merge_sort_animation(list, constants, temp_list):
@@ -16,7 +15,7 @@ def merge_sort_animation(list, constants, temp_list):
     """
     if len(list) <= 1:
         return list
-    # input("Enter merge_sort Press Enter to continue...")
+
     left_half, right_half = split_list(list, constants)
     left = merge_sort_animation(left_half, constants, temp_list)
     print("left in merge_sort: ", left)
