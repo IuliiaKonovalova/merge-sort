@@ -13,7 +13,8 @@ def split_list(initial_list, constants):
         right_part (list): right part of the list
     """
     os.system('clear')
-    print("\n TO BE SPLIT: ", initial_list)
+    print("MERGE SORT ANIMATION\n")
+    print("TO BE SPLIT: ", initial_list)
     print_items(initial_list, constants)
     sleep(1.5)
 
@@ -29,5 +30,6 @@ def split_list(initial_list, constants):
     print("\n")
     sleep(1.5)
     os.system('clear')
+    print("MERGE SORT ANIMATION\n")
 
     return left_part, right_part

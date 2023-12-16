@@ -33,6 +33,7 @@ def merge(left, right, constants, temp_list):
     print_items(sorted_list, constants)
     sleep(1.5)
     os.system('clear')
+    print("MERGE SORT ANIMATION\n")
     if len(temp_list) == len(sorted_list):
         print("FINAL SORTED LIST: ", sorted_list)
         print_items(sorted_list, constants)

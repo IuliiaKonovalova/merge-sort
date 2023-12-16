@@ -1,8 +1,11 @@
+import os
+from time import sleep
+from tools.print_items import print_items
 from animations.merge_sort_animation.split_functionality import split_list
 from animations.merge_sort_animation.merge_functionality import merge
 
 
-def merge_sort_animation(list, constants, temp_list):
+def merge_sort_animation(initial_list, constants, temp_list):
     """
     Sorts a list in ascending order
     Returns a new sorted list
@@ -13,10 +16,16 @@ def merge_sort_animation(list, constants, temp_list):
 
     Takes O(kn log n) time
     """
-    if len(list) <= 1:
-        return list
+    if temp_list == initial_list:
+        os.system('clear')
+        print("MERGE SORT ANIMATION\n")
+        print("INITIAL LIST: ", temp_list)
+        print_items(initial_list, constants)
+        sleep(1.5)
+    if len(initial_list) <= 1:
+        return initial_list
 
-    left_half, right_half = split_list(list, constants)
+    left_half, right_half = split_list(initial_list, constants)
     left = merge_sort_animation(left_half, constants, temp_list)
     print("left in merge_sort: ", left)
     right = merge_sort_animation(right_half, constants, temp_list)
