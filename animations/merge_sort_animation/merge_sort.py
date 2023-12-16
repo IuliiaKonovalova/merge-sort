@@ -3,7 +3,7 @@ from animations.merge_sort_animation.merge_functionality import merge
 # from constant_dictionary import constants
 
 
-def merge_sort_animation(list, constants):
+def merge_sort_animation(list, constants, temp_list):
     """
     Sorts a list in ascending order
     Returns a new sorted list
@@ -14,14 +14,13 @@ def merge_sort_animation(list, constants):
 
     Takes O(kn log n) time
     """
-
     if len(list) <= 1:
         return list
     # input("Enter merge_sort Press Enter to continue...")
     left_half, right_half = split_list(list, constants)
-    left = merge_sort_animation(left_half, constants)
-    # print("left in merge_sort: ", left)
-    right = merge_sort_animation(right_half, constants)
-    # print("right in merge_sort: ", right)
+    left = merge_sort_animation(left_half, constants, temp_list)
+    print("left in merge_sort: ", left)
+    right = merge_sort_animation(right_half, constants, temp_list)
+    print("right in merge_sort: ", right)
 
-    return merge(left, right, constants)
+    return merge(left, right, constants, temp_list)
