@@ -67,7 +67,7 @@ def print_list_with_pointers(list_data, min_index, scan_index):
         if k != last_index:
             if k == min_index and min_index == scan_index :
                 print(
-                    f"""{term.on_bright_yellow(
+                    f"""{term.on_lightgreen(
                       term.green(str(list_data[k]))
                     )}""",
                     end=", "
@@ -90,7 +90,7 @@ def print_list_with_pointers(list_data, min_index, scan_index):
         else:
             if k == min_index and min_index == scan_index :
                 print(
-                    f"""{term.on_bright_yellow(
+                    f"""{term.on_lightgreen(
                       term.green(str(list_data[k]))
                     )}""",
                     end=""
