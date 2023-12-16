@@ -52,7 +52,7 @@ def show_merge_sort_animation_with_constants(constants):
     print(
     f"""
     To compare: 
-    Sorted list: {merge_sort_animation(unsorted_list, constants)}
+    Sorted list: {merge_sort_animation(unsorted_list, constants, temp_list)}
     Initial list: {temp_list}
     """
     )
