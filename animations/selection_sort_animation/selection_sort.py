@@ -54,7 +54,16 @@ def printing_animation(min_index, scan_index, comp_index, list_data, constants):
 
 
 def print_list_with_pointers(list_data, scan_index, comp_index, min_index):
-
+    """
+    Prints the items in a list with pointers and colored formatting
+    Args:
+        list_data (list): list of numbers
+        scan_index (int): index being scanned
+        comp_index (int): index used for comparison
+        min_index (int): index with the minimum value
+    Returns:
+        None
+    """
     last_index = len(list_data) - 1
     print("[", end="")
     for k, item in enumerate(list_data):
