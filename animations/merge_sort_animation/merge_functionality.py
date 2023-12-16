@@ -1,5 +1,6 @@
 import os
 from time import sleep
+from tools.colorama_constants import *
 from tools.print_items import print_items
 
 def merge(left, right, constants, temp_list):
@@ -33,7 +34,10 @@ def merge(left, right, constants, temp_list):
     print_items(sorted_list, constants)
     sleep(1.5)
     os.system('clear')
-    print("MERGE SORT ANIMATION\n")
+    print(
+      f"""{yellow}MERGE SORT ANIMATION{white}
+      """
+    )
     if len(temp_list) == len(sorted_list):
         print("FINAL SORTED LIST: ", sorted_list)
         print_items(sorted_list, constants)
