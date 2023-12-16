@@ -1,5 +1,6 @@
 import os
 from time import sleep
+from tools.colorama_constants import *
 from tools.print_items import print_items
 from animations.merge_sort_animation.split_functionality import split_list
 from animations.merge_sort_animation.merge_functionality import merge
@@ -18,7 +19,10 @@ def merge_sort_animation(initial_list, constants, temp_list):
     """
     if temp_list == initial_list:
         os.system('clear')
-        print("MERGE SORT ANIMATION\n")
+        print(
+      f"""{yellow}MERGE SORT ANIMATION{white}
+      """
+        )
         print("INITIAL LIST: ", temp_list)
         print_items(initial_list, constants)
         sleep(1.5)
@@ -27,8 +31,8 @@ def merge_sort_animation(initial_list, constants, temp_list):
 
     left_half, right_half = split_list(initial_list, constants)
     left = merge_sort_animation(left_half, constants, temp_list)
-    print("left in merge_sort: ", left)
+    print("LEFT: ", left)
     right = merge_sort_animation(right_half, constants, temp_list)
-    print("right in merge_sort: ", right)
+    print("RIGHT: ", right)
 
     return merge(left, right, constants, temp_list)
