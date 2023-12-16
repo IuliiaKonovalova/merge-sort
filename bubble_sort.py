@@ -1,5 +1,5 @@
 from tools.print_items import *
-from colorama import Fore
+# from colorama import Fore
 
 
 def bubble_sort(unordered_list, constants):
@@ -11,9 +11,9 @@ def bubble_sort(unordered_list, constants):
         initial_list (list): sorted list of numbers
     """
     for i in range(len(unordered_list) - 1):
-        print(f"""Index in i:  {Fore.GREEN}{i}{Fore.WHITE}""")
+        print(f"""Index in i:  {green}{i}{white}""")
         for j in range(len(unordered_list) - 1):
-            print(f"""Index in j:  {Fore.BLUE}{j}{Fore.WHITE}""")
+            print(f"""Index in j:  {blue}{j}{white}""")
             print_list_with_pointers(unordered_list, i, j)
             input("Press Enter to continue...")
             if unordered_list[j] > unordered_list[j + 1]:
@@ -55,22 +55,22 @@ def print_list_with_pointers(unordered_list, i, j):
             if k != last_index:
                 if k == i and i == j :
                     print(
-                        f"""{Fore.RED}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{red}{unordered_list[k]}{white}""",
                         end=", "
                     )
                 elif k == i:
                     print(
-                        f"""{Fore.GREEN}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{green}{unordered_list[k]}{white}""",
                         end=", "
                     )
                 elif k == j:
                     print(
-                        f"""{Fore.BLUE}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{blue}{unordered_list[k]}{white}""",
                         end=", "
                     )
                 elif k == j + 1:
                     print(
-                        f"""{Fore.MAGENTA}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{magenta}{unordered_list[k]}{white}""",
                         end=", "
                     )
                 else:
@@ -78,22 +78,22 @@ def print_list_with_pointers(unordered_list, i, j):
             elif k == last_index:
                 if k == i and i == j:
                     print(
-                        f"""{Fore.RED}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{red}{unordered_list[k]}{white}""",
                         end=""
                     )
                 elif k == i:
                     print(
-                        f"""{Fore.GREEN}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{green}{unordered_list[k]}{white}""",
                         end=""
                     )
                 elif k == j:
                     print(
-                        f"""{Fore.BLUE}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{blue}{unordered_list[k]}{white}""",
                         end=""
                     )
                 elif k == j + 1:
                     print(
-                        f"""{Fore.MAGENTA}{unordered_list[k]}{Fore.WHITE}""",
+                        f"""{magenta}{unordered_list[k]}{white}""",
                         end=""
                     )
                 else:
