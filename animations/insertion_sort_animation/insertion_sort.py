@@ -14,16 +14,17 @@ def insertion_sort_animation(list_data, constants):
     for scan_index in range(1, len(list_data)):
         temp = list_data[scan_index]
         min_index = scan_index
+        printing_animation(temp, list_data, constants, min_index, scan_index)
         while min_index > 0 and temp < list_data[min_index - 1]:
             list_data[min_index] = list_data[min_index - 1]
             min_index -= 1
             list_data[min_index] = temp
-            printing_animation(temp, list_data, constants)
-        printing_animation(temp, list_data, constants)
+            printing_animation(temp, list_data, constants, min_index, scan_index)
+        printing_animation(temp, list_data, constants, min_index, scan_index)
     return list_data
 
 
-def printing_animation(temp, list_data, constants):
+def printing_animation(temp, list_data, constants, min_index, scan_index):
     """
     Prints the animation of insertion sort
     Args:
@@ -35,6 +36,9 @@ def printing_animation(temp, list_data, constants):
     print("INSERTION SORT ANIMATION")
     print("\n TEMP: ", temp)
     print_temp_item(temp, list_data, constants)
+    print("\n LIST: ", list_data)
+    print("\n MIN INDEX: ", min_index)
+    print("\n SCAN INDEX: ", scan_index)
     print("\n Sorting...")
     print_items(list_data, constants)
-    sleep(0.9)
+    sleep(1.9)
