@@ -1,7 +1,8 @@
+import os
+from time import sleep
 from tools.print_items import print_items
 
-
-def merge(left, right, constants):
+def merge(left, right, constants, temp_list):
     """
     Takes 2 lists and analyzes them to sort them in ascending order
     Args:
@@ -30,5 +31,10 @@ def merge(left, right, constants):
         j += 1
     print("\nSORTED and MERGED LIST: ", sorted_list)
     print_items(sorted_list, constants)
-    print("\n")
+    sleep(1.5)
+    os.system('clear')
+    if len(temp_list) == len(sorted_list):
+        print("FINAL SORTED LIST: ", sorted_list)
+        print_items(sorted_list, constants)
+
     return sorted_list
