@@ -5,7 +5,13 @@ from tools.print_items import *
 
 
 def bubble_sort_animation(list_data, constants_1):
-
+    """
+    Sorts a list of numbers using bubble sort algorithm
+    Args:
+        initial_list (list): list of numbers
+    Returns:
+        initial_list (list): sorted list of numbers
+    """
     for i in range(len(list_data) - 1):
         for j in range(len(list_data) - 1):
             os.system("clear")
