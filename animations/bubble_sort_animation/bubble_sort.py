@@ -14,14 +14,30 @@ def bubble_sort_animation(list_data, constants_1):
     """
     for i in range(len(list_data) - 1):
         for j in range(len(list_data) - 1):
+            # printing animation
             animation_printing(list_data, constants_1, i, j, in_progress=True)
             if list_data[j] > list_data[j + 1]:
-                animation_printing(list_data, constants_1, i, j, in_progress=True)
+                # printing animation
+                animation_printing(
+                    list_data,
+                    constants_1,
+                    i,
+                    j,
+                    in_progress=True
+                )
                 list_data[j], list_data[
                     j + 1
                 ] = list_data[j + 1], list_data[j]
-                animation_printing(list_data, constants_1, i, j, in_progress=True)
+                # printing animation
+                animation_printing(
+                    list_data,
+                    constants_1,
+                    i,
+                    j,
+                    in_progress=True
+                )
     if list_data == sorted(list_data):
+        # printing animation
         animation_printing(list_data, constants_1, i, j, in_progress=False)
     return list_data
 
