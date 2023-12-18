@@ -14,22 +14,19 @@ def bubble_sort_animation(list_data, constants_1):
     """
     for i in range(len(list_data) - 1):
         for j in range(len(list_data) - 1):
-            animation_printing(list_data, constants_1, i, j)
+            animation_printing(list_data, constants_1, i, j, in_progress=True)
             if list_data[j] > list_data[j + 1]:
-                animation_printing(list_data, constants_1, i, j)
+                animation_printing(list_data, constants_1, i, j, in_progress=True)
                 list_data[j], list_data[
                     j + 1
                 ] = list_data[j + 1], list_data[j]
-                animation_printing(list_data, constants_1, i, j)
-                os.system("clear")
-                print("BUBBLE SORT")
-                if list_data == sorted(list_data):
-                    print("FINAL SORTED LIST: ", list_data)
-                    print_items(list_data, constants_1)
+                animation_printing(list_data, constants_1, i, j, in_progress=True)
+    if list_data == sorted(list_data):
+        animation_printing(list_data, constants_1, i, j, in_progress=False)
     return list_data
 
 
-def animation_printing(list_data, constants_1, i, j):
+def animation_printing(list_data, constants_1, i, j, in_progress):
     """
     Prints the animation of bubble sort
     Args:
@@ -39,9 +36,13 @@ def animation_printing(list_data, constants_1, i, j):
     """
     os.system("clear")
     print("BUBBLE SORT")
-    print_list_with_pointers(list_data, i, j)
-    print_items(list_data, constants_1)
-    sleep(0.9)
+    if in_progress:
+        print_list_with_pointers(list_data, i, j)
+        print_items(list_data, constants_1)
+    else:
+        print("FINAL SORTED LIST: ", list_data)
+        print_items(list_data, constants_1)
+    sleep(0.5)
 
 
 def print_list_with_pointers(list_data, i, j):
