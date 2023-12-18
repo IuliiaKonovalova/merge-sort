@@ -5,16 +5,14 @@ from tools.print_items import *
 
 
 def bubble_sort_animation(list_data, constants_1):
-    # sleep(1.9)
-    # os.system("clear")
-    # print("BUBBLE SORT")
+
     for i in range(len(list_data) - 1):
         for j in range(len(list_data) - 1):
             os.system("clear")
             print("BUBBLE SORT")
             print_list_with_pointers(list_data, i, j)
             print_items(list_data, constants_1)
-            sleep(2.9)
+            sleep(0.9)
             if list_data[j] > list_data[j + 1]:
                 os.system("clear")
                 print("BUBBLE SORT")
@@ -23,16 +21,15 @@ def bubble_sort_animation(list_data, constants_1):
                 list_data[j], list_data[
                     j + 1
                 ] = list_data[j + 1], list_data[j]
-                sleep(2.9)
+                sleep(0.9)
                 os.system("clear")
                 print("BUBBLE SORT")
                 print_list_with_pointers(list_data, i, j)
                 print_items(list_data, constants_1)
-                sleep(2.9)
+                sleep(0.9)
                 os.system("clear")
                 print("BUBBLE SORT")
                 if list_data == sorted(list_data):
-                    # print_list_with_pointers(list_data, i, j)
                     print("FINAL SORTED LIST: ", list_data)
                     print_items(list_data, constants_1)
     return list_data
