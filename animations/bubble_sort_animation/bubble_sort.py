@@ -51,12 +51,17 @@ def animation_printing(list_data, constants_1, i, j, in_progress):
         initial_list (list): sorted list of numbers
     """
     os.system("clear")
-    print("BUBBLE SORT")
+    print(
+      f"""{yellow}BUBBLE SORT ANIMATION{white}
+      """
+    )
     if in_progress:
         print_list_with_pointers(list_data, i, j)
+        print("\n")
         print_items(list_data, constants_1)
     else:
         print("FINAL SORTED LIST: ", list_data)
+        print("\n")
         print_items(list_data, constants_1)
     sleep(0.5)
 
