@@ -14,9 +14,9 @@ def insertion_sort_animation(list_data, constants):
     """
     for scan_index in range(1, len(list_data)):
         temp = list_data[scan_index]
-        printing_animation(temp, list_data, constants, None, scan_index)
+        printing_animation(temp, list_data, constants, None, scan_index, in_progress=True)
         min_index = scan_index
-        printing_animation(temp, list_data, constants, min_index, scan_index)
+        printing_animation(temp, list_data, constants, min_index, scan_index, in_progress=True)
         while min_index > 0 and temp < list_data[min_index - 1]:
             list_data[min_index] = list_data[min_index - 1]
             min_index -= 1
@@ -26,20 +26,15 @@ def insertion_sort_animation(list_data, constants):
                 list_data,
                 constants,
                 min_index,
-                scan_index
+                scan_index,
+                in_progress=True
             )
-        printing_animation(temp, list_data, constants, min_index, scan_index)
-        os.system('clear')
-        print(
-      f"""{yellow}INSERTION SORT ANIMATION{white}
-          """
-        )
-        print("FINAL SORTED LIST: ", list_data)
-        print_items(list_data, constants)
+        printing_animation(temp, list_data, constants, min_index, scan_index, in_progress=True)
+    printing_animation(temp, list_data, constants, min_index, scan_index, in_progress=False)
     return list_data
 
 
-def printing_animation(temp, list_data, constants, min_index, scan_index):
+def printing_animation(temp, list_data, constants, min_index, scan_index, in_progress):
     """
     Prints the animation of insertion sort
     Args:
@@ -52,12 +47,17 @@ def printing_animation(temp, list_data, constants, min_index, scan_index):
       f"""{yellow}INSERTION SORT ANIMATION{white}
           """
     )
-    print("\n TEMP: ", temp)
-    print_temp_item(temp, list_data, constants)
-    print("\n LIST: ", end="")
-    print_list_with_pointers(list_data, min_index, scan_index)
-    print("\n Sorting...")
-    print_items(list_data, constants)
+    if in_progress:
+        print("\n TEMP: ", temp)
+        print_temp_item(temp, list_data, constants)
+        print("\n LIST: ", end="")
+        print_list_with_pointers(list_data, min_index, scan_index)
+        print("\n Sorting...")
+        print_items(list_data, constants)
+    else:
+        print("FINAL SORTED LIST: ", list_data)
+        print("\n")
+        print_items(list_data, constants)
     sleep(0.9)
 
 
