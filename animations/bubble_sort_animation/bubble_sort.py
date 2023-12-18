@@ -1,31 +1,44 @@
 import os
 from time import sleep
-from tools.colorama_constants import *
+from tools.painting_constants import *
 from tools.print_items import *
 
 
-def bubble_sort_animation(unordered_list, constants_1):
-    sleep(1.9)
-    os.system("clear")
-    print("BUBBLE SORT")
-    for i in range(len(unordered_list) - 1):
-        for j in range(len(unordered_list) - 1):
-            if unordered_list[j] > unordered_list[j + 1]:
-                unordered_list[j], unordered_list[
-                    j + 1
-                ] = unordered_list[j + 1], unordered_list[j]
-                print_list_with_pointers(unordered_list, i, j)
-                print_items(unordered_list, constants_1)
-                sleep(0.9)
+def bubble_sort_animation(list_data, constants_1):
+    # sleep(1.9)
+    # os.system("clear")
+    # print("BUBBLE SORT")
+    for i in range(len(list_data) - 1):
+        for j in range(len(list_data) - 1):
+            os.system("clear")
+            print("BUBBLE SORT")
+            print_list_with_pointers(list_data, i, j)
+            print_items(list_data, constants_1)
+            sleep(2.9)
+            if list_data[j] > list_data[j + 1]:
                 os.system("clear")
                 print("BUBBLE SORT")
-                if unordered_list == sorted(unordered_list):
-                    print_list_with_pointers(unordered_list, i, j)
-                    print_items(unordered_list, constants_1)
-    return unordered_list
+                print_list_with_pointers(list_data, i, j)
+                print_items(list_data, constants_1)
+                list_data[j], list_data[
+                    j + 1
+                ] = list_data[j + 1], list_data[j]
+                sleep(2.9)
+                os.system("clear")
+                print("BUBBLE SORT")
+                print_list_with_pointers(list_data, i, j)
+                print_items(list_data, constants_1)
+                sleep(2.9)
+                os.system("clear")
+                print("BUBBLE SORT")
+                if list_data == sorted(list_data):
+                    # print_list_with_pointers(list_data, i, j)
+                    print("FINAL SORTED LIST: ", list_data)
+                    print_items(list_data, constants_1)
+    return list_data
 
 
-def print_list_with_pointers(unordered_list, i, j):
+def print_list_with_pointers(list_data, i, j):
     """
     Prints the items in a list
     Args:
@@ -35,52 +48,56 @@ def print_list_with_pointers(unordered_list, i, j):
         None
     """
     print("[", end="")
-    last_index = len(unordered_list) - 1
-    for k in range(len(unordered_list)):
+    last_index = len(list_data) - 1
+    for k in range(len(list_data)):
             if k != last_index:
                 if k == i and i == j :
                     print(
-                        f"""{red}{unordered_list[k]}{white}""",
+                        f"""{b_forestgreen(str(list_data[k]))}{white}""",
                         end=", "
                     )
                 elif k == i:
                     print(
-                        f"""{green}{unordered_list[k]}{white}""",
+                        f"""{term.on_lightgreen(
+                          term.green(str(list_data[k]))
+                        )}""",
                         end=", "
                     )
                 elif k == j:
                     print(
-                        f"""{blue}{unordered_list[k]}{white}""",
+                        f"""{b_dodgerblue2(str(list_data[k]))}{white}""",
                         end=", "
                     )
                 elif k == j + 1:
                     print(
-                        f"""{magenta}{unordered_list[k]}{white}""",
+                        f"""{b_purple1(str(list_data[k]))}{white}""",
                         end=", "
                     )
                 else:
-                    print(unordered_list[k], end=", ")
+                    print(list_data[k], end=", ")
             elif k == last_index:
                 if k == i and i == j:
                     print(
-                        f"""{red}{unordered_list[k]}{white}""",
+                        f"""{b_forestgreen(str(list_data[k]))}{white}""",
                         end=""
                     )
                 elif k == i:
                     print(
-                        f"""{green}{unordered_list[k]}{white}""",
+                        f"""{term.on_lightgreen(
+                          term.green(str(list_data[k]))
+                        )}""",
                         end=""
                     )
                 elif k == j:
                     print(
-                        f"""{blue}{unordered_list[k]}{white}""",
+                        f"""{b_dodgerblue2(str(list_data[k]))}{white}""",
                         end=""
                     )
                 elif k == j + 1:
                     print(
-                        f"""{magenta}{unordered_list[k]}{white}""",
+                        f"""{b_purple1(str(list_data[k]))}{white}""",
                         end=""
                     )
                 else:
-                    print(unordered_list[k], end="")
+                    print(list_data[k], end="")
     print("]")
