@@ -1,7 +1,7 @@
 import os
 from time import sleep
 from tools.print_items import *
-from tools.colorama_constants import *
+from tools.painting_constants import *
 
 
 def insertion_sort_animation(list_data, constants):
@@ -34,7 +34,7 @@ def insertion_sort_animation(list_data, constants):
       f"""{yellow}INSERTION SORT ANIMATION{white}
           """
         )
-        print("LIST DATA AFTER SORT: ")
+        print("FINAL SORTED LIST: ", list_data)
         print_items(list_data, constants)
     return list_data
 
