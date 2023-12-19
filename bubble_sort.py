@@ -1,5 +1,4 @@
 from tools.print_items import *
-# from colorama import Fore
 
 
 def bubble_sort(unordered_list, constants):
