@@ -2,7 +2,7 @@ import os
 from time import sleep
 from tools.print_items import print_items, print_temp_item
 from tools.constant_dictionary import *
-from tools.colorama_constants import *
+from tools.painting_constants import *
 
 
 def selection_sort_animation(list_data, constants):
@@ -63,6 +63,13 @@ def selection_sort_animation(list_data, constants):
                 list_data,
                 constants
             )
+        os.system('clear')
+        print(
+      f"""{yellow}SELECTION SORT ANIMATION{white}
+      """
+        )
+        print("FINAL SORTED LIST: ", list_data)
+        print_items(list_data, constants)
     return list_data
 
 
@@ -86,7 +93,7 @@ def printing_animation(
       """
       )
     print("\n MIN_INDEX")
-    
+
     print_temp_item(min_index, list_data, constants)
     print("\n")
     print("LIST DATA AFTER SORT: ", end="")
