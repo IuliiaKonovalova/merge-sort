@@ -1,6 +1,6 @@
 import os
 from time import sleep
-from tools.print_items import print_items
+from tools.print_items import *
 from tools.constant_dictionary import *
 
 
@@ -30,16 +30,16 @@ def partition(arr, low, high, constants):
     """
     Partitioning step in quick sort
     """
-    pivot = arr[high]
-    i = low - 1
-    for j in range(low, high):
+    pivot = arr[low]  # Pivot changed to arr[low]
+    i = low + 1
+    for j in range(low + 1, high + 1):
         if arr[j] <= pivot:
-            i += 1
             arr[i], arr[j] = arr[j], arr[i]
-            printing_animation(arr, pivot, i, j, low, high, constants)
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    printing_animation(arr, pivot, i + 1, high, low, high, constants)
-    return i + 1
+            i += 1
+            printing_animation(arr, pivot, i - 1, j, low, high, constants)
+    arr[low], arr[i - 1] = arr[i - 1], arr[low]
+    printing_animation(arr, pivot, i - 1, high, low, high, constants)
+    return i - 1
 
 
 def printing_animation(arr, pivot, pivot_index, current_index, low, high, constants):
@@ -48,6 +48,7 @@ def printing_animation(arr, pivot, pivot_index, current_index, low, high, consta
     print("QUICK SORT ANIMATION")
     print("\n Pivot: ", pivot)
     print("\n Current Index: ", current_index)
+    print_temp_item(current_index, arr, constants)
     print("\n Low: ", low)
     print("\n High: ", high)
     print_items(arr, constants)
