@@ -1,7 +1,4 @@
-import os
-from time import sleep
-from tools.painting_constants import *
-from tools.print_items import *
+from animations.bubble_sort_animation.animation_control import *
 
 
 def bubble_sort_animation(list_data, constants_1):
@@ -15,10 +12,10 @@ def bubble_sort_animation(list_data, constants_1):
     for i in range(len(list_data) - 1):
         for j in range(len(list_data) - 1):
             # printing animation
-            animation_printing(list_data, constants_1, i, j, in_progress=True)
+            animation_control(list_data, constants_1, i, j, in_progress=True)
             if list_data[j] > list_data[j + 1]:
                 # printing animation
-                animation_printing(
+                animation_control(
                     list_data,
                     constants_1,
                     i,
@@ -29,7 +26,7 @@ def bubble_sort_animation(list_data, constants_1):
                     j + 1
                 ] = list_data[j + 1], list_data[j]
                 # printing animation
-                animation_printing(
+                animation_control(
                     list_data,
                     constants_1,
                     i,
@@ -38,94 +35,5 @@ def bubble_sort_animation(list_data, constants_1):
                 )
     if list_data == sorted(list_data):
         # printing animation
-        animation_printing(list_data, constants_1, i, j, in_progress=False)
+        animation_control(list_data, constants_1, i, j, in_progress=False)
     return list_data
-
-
-def animation_printing(list_data, constants_1, i, j, in_progress):
-    """
-    Prints the animation of bubble sort
-    Args:
-        initial_list (list): list of numbers
-    Returns:
-        initial_list (list): sorted list of numbers
-    """
-    os.system("clear")
-    print(
-      f"""{yellow}BUBBLE SORT ANIMATION{white}
-      """
-    )
-    if in_progress:
-        print_list_with_pointers(list_data, i, j)
-        print("\n")
-        print_items(list_data, constants_1)
-    else:
-        print("FINAL SORTED LIST: ", list_data)
-        print("\n")
-        print_items(list_data, constants_1)
-    sleep(0.5)
-
-
-def print_list_with_pointers(list_data, i, j):
-    """
-    Prints the items in a list
-    Args:
-        keys (list): list of numbers
-        constants_dict (dict): dictionary of constants
-    Returns:
-        None
-    """
-    print("[", end="")
-    last_index = len(list_data) - 1
-    for k in range(len(list_data)):
-            if k != last_index:
-                if k == i and i == j :
-                    print(
-                        f"""{b_forestgreen(str(list_data[k]))}{white}""",
-                        end=", "
-                    )
-                elif k == i:
-                    print(
-                        f"""{term.on_lightgreen(
-                          term.green(str(list_data[k]))
-                        )}""",
-                        end=", "
-                    )
-                elif k == j:
-                    print(
-                        f"""{b_dodgerblue2(str(list_data[k]))}{white}""",
-                        end=", "
-                    )
-                elif k == j + 1:
-                    print(
-                        f"""{b_purple1(str(list_data[k]))}{white}""",
-                        end=", "
-                    )
-                else:
-                    print(list_data[k], end=", ")
-            elif k == last_index:
-                if k == i and i == j:
-                    print(
-                        f"""{b_forestgreen(str(list_data[k]))}{white}""",
-                        end=""
-                    )
-                elif k == i:
-                    print(
-                        f"""{term.on_lightgreen(
-                          term.green(str(list_data[k]))
-                        )}""",
-                        end=""
-                    )
-                elif k == j:
-                    print(
-                        f"""{b_dodgerblue2(str(list_data[k]))}{white}""",
-                        end=""
-                    )
-                elif k == j + 1:
-                    print(
-                        f"""{b_purple1(str(list_data[k]))}{white}""",
-                        end=""
-                    )
-                else:
-                    print(list_data[k], end="")
-    print("]")
