@@ -213,8 +213,8 @@ def show_quick_sort_with_constants(constants):
     )
     temp_list = unsorted_list.copy()
     resulted_list = quick_sort(unsorted_list, constants, temp_list)
-    print("Final list: ")
-    print_items(resulted_list, constants)
+    # print("Final list: ")
+    # print_items(resulted_list, constants)
     print(
         f"""
 
@@ -239,10 +239,10 @@ def show_quick_sort_animation_with_constants(constants):
         sort_algorithm_name
     )
     temp_list = unsorted_list.copy()
-    resulted_list = quick_sort_animation(unsorted_list, constants)
-    print("Final list: ")
-    print_items(resulted_list, constants)
-    sleep(1)
+    resulted_list = quick_sort_animation(unsorted_list, constants, temp_list)
+    # print("Final list: ")
+    # print_items(resulted_list, constants)
+    # sleep(1)
     print(
         f"""
 
