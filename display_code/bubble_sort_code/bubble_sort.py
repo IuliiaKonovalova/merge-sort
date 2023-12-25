@@ -1,4 +1,4 @@
-from tools.colorama_constants import *
+from tools.painting_constants import *
 
 
 def display_bubble_sort_code():
