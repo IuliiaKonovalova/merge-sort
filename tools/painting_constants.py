@@ -1,33 +1,8 @@
 """This file contains constants for colorama."""
-# from colorama import Fore, Back, Style
 from blessed import Terminal
+
+
 term = Terminal()
-
-# white = Fore.WHITE
-# green = Fore.GREEN
-# blue = Fore.BLUE
-# yellow = Fore.YELLOW
-# magenta = Fore.MAGENTA
-# cyan = Fore.CYAN
-# red = Fore.RED
-# black = Fore.BLACK
-
-
-# b_gr_f_ye = Back.GREEN + Fore.YELLOW 
-# b_bl_f_ye = Back.BLUE + Fore.YELLOW
-
-# b_black = Back.BLACK
-# b_red = Back.RED
-# b_green = Back.GREEN
-# b_yellow = Back.YELLOW
-# b_blue = Back.BLUE
-# b_magenta = Back.MAGENTA
-# b_cyan = Back.CYAN
-# b_white = Back.WHITE
-
-# dim = Style.DIM
-
-# reset = Style.RESET_ALL
 
 
 white = term.white
