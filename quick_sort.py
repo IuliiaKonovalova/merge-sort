@@ -66,7 +66,7 @@ Greater than pivot: {blue}{greater_than_pivot}{white}
             )
         sleep(0.9)
         print()
-        print_less_pivot_greater(less_than_pivot, pivot, greater_than_pivot)
+        print_list_to_merge(less_than_pivot, pivot, greater_than_pivot)
         merged_list = get_whole_list(
             less_than_pivot,
             pivot,
@@ -83,7 +83,7 @@ Greater than pivot: {blue}{greater_than_pivot}{white}
         ) + [pivot] + quick_sort(greater_than_pivot, constants, temp_list)
 
 
-def print_list_with_pivot(unsorted_list, pivot, constants):
+def print_list_with_pivot(unsorted_list, pivot):
     """
     Prints the items in a list
     Args:
@@ -139,7 +139,7 @@ def get_whole_list(less_than_pivot, pivot, greater_than_pivot):
     return new_list
 
 
-def print_less_pivot_greater(less_than_pivot, pivot, greater_than_pivot):
+def print_list_to_merge(less_than_pivot, pivot, greater_than_pivot):
     """
     Prints the less than pivot and greater than pivot
     Args:
