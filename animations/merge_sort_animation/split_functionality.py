@@ -1,7 +1,7 @@
 import os
 from time import sleep
 from tools.print_items import print_items
-from tools.colorama_constants import *
+from tools.painting_constants import *
 
 
 def split_list(initial_list, constants):

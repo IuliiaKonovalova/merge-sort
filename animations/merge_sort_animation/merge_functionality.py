@@ -1,6 +1,6 @@
 import os
 from time import sleep
-from tools.colorama_constants import *
+from tools.painting_constants import *
 from tools.print_items import print_items
 
 def merge(left, right, constants, temp_list):

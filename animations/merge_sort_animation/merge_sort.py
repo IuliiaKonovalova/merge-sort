@@ -1,6 +1,6 @@
 import os
 from time import sleep
-from tools.colorama_constants import *
+from tools.painting_constants import *
 from tools.print_items import print_items
 from animations.merge_sort_animation.split_functionality import split_list
 from animations.merge_sort_animation.merge_functionality import merge
