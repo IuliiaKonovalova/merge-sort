@@ -2,9 +2,10 @@ import os
 from time import sleep
 from tools.print_items import *
 from tools.constant_dictionary import *
+from tools.painting_constants import *
 
 
-def quick_sort_animation(list_data, constants):
+def quick_sort_animation(list_data, constants, temp_list):
     """
     Sorts a list of numbers using quick sort algorithm
     Args:
@@ -49,7 +50,56 @@ def animation_control(list_data, pivot, pivot_index, current_index, low, high, c
     print("\n Pivot: ", pivot)
     print("\n Current Index: ", current_index)
     print_temp_item(current_index, list_data, constants)
+    print_list_with_pointers(list_data, pivot_index, low, high)
     print("\n Low: ", low)
     print("\n High: ", high)
     print_items(list_data, constants)
-    sleep(0.9)
+    sleep(2.9)
+
+
+def print_list_with_pointers(list_data, pivot, low, high):
+    """
+    Prints the items in a list
+    Args:
+        list_data (list): list of numbers
+        pivot (int): pivot
+        low (int): low
+        high (int): high
+    Returns:
+        None
+    """
+    print("[", end="")
+    for i in range(len(list_data)):
+        if i == pivot:
+            print(f"{yellow}{list_data[i]}{white}", end="")
+        elif i == low:
+            print(f"{green}{list_data[i]}{white}", end="")
+        elif i == high:
+            print(f"{blue}{list_data[i]}{white}", end="")
+        else:
+            print(list_data[i], end="")
+        if i != len(list_data) - 1:
+            print(", ", end="")
+    print("]")
+
+
+def print_list_to_merge(less_than_pivot, pivot, greater_than_pivot):
+    """
+    Prints the less than pivot and greater than pivot
+    Args:
+        less_than_pivot (list): list of numbers less than the pivot
+        pivot (int): the pivot
+        greater_than_pivot (list): list of numbers greater than the pivot
+    Returns:
+        None
+    """
+    print(
+        f"""{green}{less_than_pivot}{white}""", end=" + "
+    )
+    print(
+        f"""{yellow}{pivot}{white}""", end=" + "
+    )
+    print(
+        f"""{blue}{greater_than_pivot}{white}"""
+    )
+    print()
