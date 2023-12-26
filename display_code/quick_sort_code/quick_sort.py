@@ -1,4 +1,4 @@
-from tools.colorama_constants import *
+from tools.painting_constants import *
 
 
 def display_quick_sort_code():
@@ -9,7 +9,7 @@ def display_quick_sort_code():
     {blue}if{white} len{yellow}({white}arr{yellow}){white} <= 1:
         {blue}return{white} arr
     {blue}else{white}:
-        pivot = arr{yellow}[{white}[0{yellow}]{white}
+        pivot = arr{yellow}[{white}0{yellow}]{white}
         less_than_pivot = {yellow}[{white}x for x in arr{yellow}[{white}1:{yellow}]{white} if x <= pivot{yellow}]{white}
         greater_than_pivot = {yellow}[{white}x for x in arr{yellow}[{white}1:{yellow}]{white} if x > pivot{yellow}]{white}
         {blue}return{white} quick_sort{yellow}({white}less_than_pivot{yellow}){white} + {yellow}[{white}pivot{yellow}]{white} + quick_sort{yellow}({white}greater_than_pivot{yellow}){white}
