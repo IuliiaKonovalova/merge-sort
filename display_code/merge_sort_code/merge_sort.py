@@ -1,5 +1,5 @@
 from time import sleep
-from tools.colorama_constants import *
+from tools.painting_constants import *
 
 
 def display_merge_sort_code():
@@ -19,6 +19,7 @@ def display_merge_sort_code():
     {blue}return{white} merge{yellow}({white}left, right{yellow}){white}
     """
     )
+
     sleep(2)
     print(
         f"""
@@ -29,6 +30,7 @@ def display_merge_sort_code():
     {blue}return{white} left_part, right_part
     """
     )
+
     sleep(2)
     print(
         f"""
@@ -43,11 +45,11 @@ def display_merge_sort_code():
         {blue}else{white}:
             sorted_list.append{yellow}({white}right{yellow}[{white}j{yellow}]{white}{yellow}){white}
             j += 1
-    {Fore.GREEN}# append the remaining elements from left that was not fully iterated{white}
+    {green}# append the remaining elements from left that was not fully iterated{white}
     {blue}while{white} i < len{yellow}({white}left{yellow}){white}:
         sorted_list.append{yellow}({white}left{yellow}[{white}i{yellow}]{white}{yellow}){white}
         i += 1
-    {Fore.GREEN}# append the remaining elements from right that was not fully iterated{white}
+    {green}# append the remaining elements from right that was not fully iterated{white}
     {blue}while{white} j < len{yellow}({white}right{yellow}){white}:
         sorted_list.append{yellow}({white}right{yellow}[{white}j{yellow}]{white}{yellow}){white}
         j += 1
