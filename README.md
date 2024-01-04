@@ -20,6 +20,18 @@ The project hasn't been published yet, so you need to clone the repository to us
 git clone https://github.com/IuliiaKonovalova/sorting-algorithms.git
 ```
 
+Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate the virtual environment
+
+```bash
+source .venv/bin/activate
+```
+
 Install the dependencies
 
 ```bash
