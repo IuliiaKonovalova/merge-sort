@@ -2,6 +2,7 @@
 from menu_feature.main_menu_initialization import *
 from menu_feature.algorithms_options_menu_initialization import *
 from tools.constant_dictionary import *
+from menu_feature.quit_message import *
 
 
 def menu_logic():
@@ -13,7 +14,7 @@ def menu_logic():
     while quitting is not True:
         options_choice = show_main_menu()
         if options_choice == 'Quit':
-            print(f'''QUITTING...''')
+            print_quitting_animation()
             quitting = True
         else:
             show_algorithm_options_menu(options_choice)
