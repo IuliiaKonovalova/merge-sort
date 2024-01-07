@@ -1,5 +1,3 @@
-import os
-from time import sleep
 from tutorials.merge_sort_tutorial.merge_sort import merge_sort
 from tutorials.selection_sort_tutorial.selection_sort import selection_sort
 from animations.selection_sort_animation.selection_sort import *
@@ -213,8 +211,6 @@ def show_quick_sort_with_constants(constants):
     )
     temp_list = unsorted_list.copy()
     resulted_list = quick_sort(unsorted_list, constants, temp_list)
-    # print("Final list: ")
-    # print_items(resulted_list, constants)
     print(
         f"""
 
@@ -240,9 +236,6 @@ def show_quick_sort_animation_with_constants(constants):
     )
     temp_list = unsorted_list.copy()
     resulted_list = quick_sort_animation(unsorted_list, constants, temp_list)
-    # print("Final list: ")
-    # print_items(resulted_list, constants)
-    # sleep(1)
     print(
         f"""
 
