@@ -23,3 +23,9 @@ list_length_options = [
     '2. Blue - White - Black',
     '3. Full version',
 ]
+
+
+back_options = [
+    '1. Back',
+    '2. Exit',
+]
