@@ -15,5 +15,5 @@ def display_bubble_sort_code():
     {blue}return{white} initial_list
     """
     )
-    sleep(2)
-    show_back_menu()
+    # sleep(2)
+    # show_back_menu()
