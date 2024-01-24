@@ -23,3 +23,5 @@ def show_algorithm_code(algorithm_options_name):
         display_quick_sort_code()
     elif algorithm_options_name == 'Bubble Sort':
         display_bubble_sort_code()
+    sleep(2)
+    show_back_menu()
