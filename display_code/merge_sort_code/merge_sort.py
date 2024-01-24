@@ -57,5 +57,3 @@ def display_merge_sort_code():
     {blue}return{white} sorted_list
     """
     )
-    sleep(2)
-    show_back_menu()
