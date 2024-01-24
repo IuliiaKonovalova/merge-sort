@@ -1,3 +1,5 @@
+from time import sleep
+from menu_feature.back_menu_functionality import show_back_menu
 from simple_term_menu import TerminalMenu
 from menu_feature.menu_constants import *
 from tools.constant_dictionary import *
@@ -127,3 +129,5 @@ def show_list_length_options_menu(algorithm_name, algorithm_option):
             elif list_length_options_choice == '3. Full version':
                 print(f'''FULL VERSION''')
                 show_bubble_sort_with_constants(constants_3)
+    sleep(2)
+    show_back_menu()
