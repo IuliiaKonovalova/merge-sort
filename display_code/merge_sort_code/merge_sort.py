@@ -1,6 +1,5 @@
 from time import sleep
 from tools.painting_constants import *
-from menu_feature.back_menu_functionality import show_back_menu
 
 
 def display_merge_sort_code():
