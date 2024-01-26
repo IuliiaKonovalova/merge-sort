@@ -1,7 +1,4 @@
-from simple_term_menu import TerminalMenu
-from menu_feature.menu_constants import *
 from menu_feature.list_length_options_initialization import *
-from menu_feature.display_code_control import *
 
 
 algorithm_options_menu = TerminalMenu(algorithm_options)
