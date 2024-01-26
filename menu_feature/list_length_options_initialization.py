@@ -1,12 +1,10 @@
-from time import sleep
-from menu_feature.back_menu_functionality import show_back_menu
-from simple_term_menu import TerminalMenu
+from core_imports.core_imports import *
+from core_imports.logical_core_imports import *
 from menu_feature.menu_constants import *
 from tools.constant_dictionary import *
 from test_cases import show_bubble_sort_animation_with_constants, show_bubble_sort_with_constants, show_insertion_sort_animation_with_constants, show_insertion_sort_with_constants, show_merge_sort_animation_with_constants, show_merge_sort_with_constants, show_quick_sort_animation_with_constants, show_quick_sort_with_constants, show_selection_sort_animation_with_constants, show_selection_sort_with_constants
-from display_code.merge_sort_code.merge_sort import display_merge_sort_code
-
-
+from menu_feature.back_menu_functionality import *
+from menu_feature.display_code_control import *
 
 list_length_options_menu = TerminalMenu(list_length_options)
 
@@ -43,8 +41,6 @@ def show_list_length_options_menu(algorithm_name, algorithm_option):
             elif list_length_options_choice == '3. Full version':
                 print(f'''FULL VERSION''')
                 show_merge_sort_with_constants(constants_3)
-        else:
-            display_merge_sort_code()
     elif algorithm_name == 'Selection Sort':
         if algorithm_option == 'animation':
             if list_length_options_choice == '1. Yellow to red':
